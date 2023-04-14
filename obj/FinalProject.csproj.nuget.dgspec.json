@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\FinalProject\\FinalProject.csproj": {}
+    "C:\\Users\\User\\source\\repos\\Final Project\\FinalProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\FinalProject\\FinalProject.csproj": {
+    "C:\\Users\\User\\source\\repos\\Final Project\\FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\FinalProject\\FinalProject.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Final Project\\FinalProject.csproj",
         "projectName": "FinalProject",
-        "projectPath": "C:\\Users\\User\\source\\repos\\FinalProject\\FinalProject.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\Final Project\\FinalProject.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\FinalProject\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\Final Project\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
