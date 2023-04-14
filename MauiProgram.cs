@@ -2,6 +2,7 @@
 
 public static class MauiProgram
 {
+	// iza iza iza
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
