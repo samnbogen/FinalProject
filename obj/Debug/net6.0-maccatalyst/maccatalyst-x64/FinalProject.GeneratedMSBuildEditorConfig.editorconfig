@@ -22,11 +22,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/izalu/OneDrive - Southern Alberta Institute of Technology/Winter2023/CPRG211-OOP2/Project/FinalProject/MainPage.xaml]
+[C:/Users/izalu/OneDrive - Southern Alberta Institute of Technology/Winter2023/CPRG211-OOP2/Project/FinalProject/HistoryPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.HistoryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = HistoryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = HistoryPage.xaml
+
+[C:/Users/izalu/OneDrive - Southern Alberta Institute of Technology/Winter2023/CPRG211-OOP2/Project/FinalProject/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[C:/Users/izalu/OneDrive - Southern Alberta Institute of Technology/Winter2023/CPRG211-OOP2/Project/FinalProject/OnHoldPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.OnHoldPage.xaml
+build_metadata.AdditionalFiles.TargetPath = OnHoldPage.xaml
+build_metadata.AdditionalFiles.RelativePath = OnHoldPage.xaml
 
 [C:/Users/izalu/OneDrive - Southern Alberta Institute of Technology/Winter2023/CPRG211-OOP2/Project/FinalProject/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -39,3 +51,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/izalu/OneDrive - Southern Alberta Institute of Technology/Winter2023/CPRG211-OOP2/Project/FinalProject/SeachPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.SeachPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SeachPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SeachPage.xaml

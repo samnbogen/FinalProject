@@ -2,7 +2,7 @@
 
 public static class MauiProgram
 {
-	//lisa lisa lis
+	//lisa lisa lisa lisa
 	// iza iza iza
 	public static MauiApp CreateMauiApp()
 	{
