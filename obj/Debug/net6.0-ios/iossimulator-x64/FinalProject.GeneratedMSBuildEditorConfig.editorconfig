@@ -8,51 +8,51 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FinalProject
-build_property.ProjectDir = C:\Users\User\source\repos\FinalProject\
+build_property.ProjectDir = C:\Users\samnb\Source\Repos\FinalProject\
 
-[C:/Users/User/source/repos/FinalProject/App.xaml]
+[C:/Users/samnb/Source/Repos/FinalProject/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/User/source/repos/FinalProject/AppShell.xaml]
+[C:/Users/samnb/Source/Repos/FinalProject/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/User/source/repos/FinalProject/HistoryPage.xaml]
+[C:/Users/samnb/Source/Repos/FinalProject/HistoryPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.HistoryPage.xaml
 build_metadata.AdditionalFiles.TargetPath = HistoryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = HistoryPage.xaml
 
-[C:/Users/User/source/repos/FinalProject/LoginPage.xaml]
+[C:/Users/samnb/Source/Repos/FinalProject/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
 
-[C:/Users/User/source/repos/FinalProject/OnHoldPage.xaml]
+[C:/Users/samnb/Source/Repos/FinalProject/OnHoldPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.OnHoldPage.xaml
 build_metadata.AdditionalFiles.TargetPath = OnHoldPage.xaml
 build_metadata.AdditionalFiles.RelativePath = OnHoldPage.xaml
 
-[C:/Users/User/source/repos/FinalProject/Resources/Styles/Colors.xaml]
+[C:/Users/samnb/Source/Repos/FinalProject/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/User/source/repos/FinalProject/Resources/Styles/Styles.xaml]
+[C:/Users/samnb/Source/Repos/FinalProject/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/User/source/repos/FinalProject/SeachPage.xaml]
+[C:/Users/samnb/Source/Repos/FinalProject/SeachPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.SeachPage.xaml
 build_metadata.AdditionalFiles.TargetPath = SeachPage.xaml
