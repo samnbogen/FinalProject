@@ -52,8 +52,8 @@
 	  <Compile Update="HistoryPage.xaml.cs">
 	    <DependentUpon>HistoryPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="SeachPage.xaml.cs">
-	    <DependentUpon>SeachPage.xaml</DependentUpon>
+	  <Compile Update="SearchPage.xaml.cs">
+	    <DependentUpon>SearchPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
