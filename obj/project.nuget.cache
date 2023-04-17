@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "skFltw1ydIatqRgc9n9x9wcMdfaIx4Q8/L94lFFR+hT2pA+HNX6SJ+NMVOZpTcFqqeXTdc1WXR/TsG/kSjpAKQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\Project\\FinalProject\\FinalProject.csproj",
-=======
-  "dgSpecHash": "KyoysO2WrCgcS4ASUcVYX/IUPcdubGZcN3vTvnz7XR6ziVEAAfMs1QRSKHTuXq623QGAgNwSakjRFPuZnoAEaw==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\FinalProject\\FinalProject.csproj",
->>>>>>> 58c213f0876db32b63be880e36bfc555713716bb
   "expectedPackageFiles": [
     "C:\\Users\\izalu\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\izalu\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
@@ -151,5 +145,12 @@
     "C:\\Users\\izalu\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.13\\microsoft.netcore.app.runtime.win-x64.6.0.13.nupkg.sha512",
     "C:\\Users\\izalu\\.nuget\\packages\\microsoft.maui.controls.runtime.win\\6.0.548\\microsoft.maui.controls.runtime.win.6.0.548.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\Project\\FinalProject\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
