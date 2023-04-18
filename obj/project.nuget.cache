@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bqav8Pk6u9ozizHmpid1/6Kp2TZvrMnC//UUzWy/OMB/2C0T+UuCKUPUNOiUbrF7OY6obp5M6LYIZIJnBIsb1g==",
+  "dgSpecHash": "CpkVgpWckFBT8RzCufHGoG9BINFBm8+v/DgAxfDDbpMr+uydyvw5HxZzrJGJwlYaLgl0RunDwOiSrfQre3Fmjw==",
   "success": true,
   "projectFilePath": "C:\\finalproject\\FinalProject.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\izalu\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\6.0.501\\microsoft.maui.graphics.win2d.winui.desktop.6.0.501.nupkg.sha512",
     "C:\\Users\\izalu\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22000.194\\microsoft.windows.sdk.buildtools.10.0.22000.194.nupkg.sha512",
     "C:\\Users\\izalu\\.nuget\\packages\\microsoft.windowsappsdk\\1.1.3\\microsoft.windowsappsdk.1.1.3.nupkg.sha512",
+    "C:\\Users\\izalu\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
     "C:\\Users\\izalu\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\izalu\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\izalu\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
