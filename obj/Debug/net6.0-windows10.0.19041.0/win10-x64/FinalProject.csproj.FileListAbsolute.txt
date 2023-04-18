@@ -760,6 +760,7 @@ C:\finalproject\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Windows
 C:\finalproject\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Power.Projection.dll
 C:\finalproject\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 C:\finalproject\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+C:\finalproject\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MySqlConnector.dll
 C:\finalproject\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 C:\finalproject\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
 C:\finalproject\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.CSharp.dll
