@@ -34,12 +34,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.HistoryPage.x
 build_metadata.AdditionalFiles.TargetPath = HistoryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = HistoryPage.xaml
 
-[C:/finalproject/LoginPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.LoginPage.xaml
-build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
-build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
-
 [C:/finalproject/OnHoldPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.OnHoldPage.xaml
