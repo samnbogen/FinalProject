@@ -8,5 +8,6 @@ namespace FinalProject.Data
 {
     internal class LibraryDatabase
     {
+
     }
 }
