@@ -2,24 +2,24 @@ using FinalProject.Entities;
 
 namespace FinalProject;
 
-public partial class CheckoutPage : ContentPage
+public partial class ReservePage : ContentPage
 {
     int count = 0;
 
-    public CheckoutPage()
+    public ReservePage()
 	{
 		InitializeComponent();
 	}
 
     Book book = new Book();
-    private async void OnCheckoutClicked(object sender, EventArgs e)
+    private async void OnReserveClicked(object sender, EventArgs e)
     {
         count++;
 
         if (count >= 1)
-            await DisplayAlert("Checked out", "Successfully checked out. Return the book by " + book.CheckOut(), "Confirm");
+            await DisplayAlert("Read", "Successfully reserved. Pick up the book by " + book.ReserveBook(), "Confirm");
 
-        SemanticScreenReader.Announce(CheckOutBtn.Text);
+        SemanticScreenReader.Announce(ReserveBtn.Text);
     }
 
 }
