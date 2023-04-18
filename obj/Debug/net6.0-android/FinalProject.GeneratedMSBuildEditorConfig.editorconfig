@@ -28,12 +28,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.CheckoutPage.
 build_metadata.AdditionalFiles.TargetPath = CheckoutPage.xaml
 build_metadata.AdditionalFiles.RelativePath = CheckoutPage.xaml
 
-[C:/finalproject/HistoryPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.HistoryPage.xaml
-build_metadata.AdditionalFiles.TargetPath = HistoryPage.xaml
-build_metadata.AdditionalFiles.RelativePath = HistoryPage.xaml
-
 [C:/finalproject/OnHoldPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.OnHoldPage.xaml

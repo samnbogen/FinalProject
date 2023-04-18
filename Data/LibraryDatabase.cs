@@ -143,6 +143,8 @@ namespace FinalProject.Data
         {
             string query = "SELECT * FROM books";
 
+            //Create a list to store the a book's properties/attributes
+            
 
             // how to display the books?
             //1. then use this list to create a book class and then add it to another list which is gonna behe list of books?
@@ -163,12 +165,12 @@ namespace FinalProject.Data
                 while (dataReader.Read())
                 {
 
-                    Book book = new Book((string)dataReader["title"],
-                                         (string)dataReader["isbn"],
-                                         (string)dataReader["f_name"],
-                                         (string)dataReader["l_name"],
-                                         (string)dataReader["publisher"],
-                                         (string)dataReader["genre"]);
+                    Book book = new Book(dataReader.GetString(0),
+                                            dataReader.GetString(1),
+                                            dataReader.GetString(2),
+                                            dataReader.GetString(3),
+                                            dataReader.GetString(4),
+                                            dataReader.GetString(5));
 
                     // now add this book with its book properties to books
                     books.Add(book);

@@ -68,5 +68,7 @@ namespace FinalProject.Entities
             }
             return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_FirstName} {status}";
         }
+
+        
     }
 }
