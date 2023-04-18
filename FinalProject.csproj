@@ -68,9 +68,6 @@
 	  <MauiXaml Update="HistoryPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="LoginPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="OnHoldPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
