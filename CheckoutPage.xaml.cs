@@ -13,7 +13,6 @@ public partial class CheckoutPage : ContentPage
         count++;
 
         if (count >= 1)
-            //CheckOutBtn.Text = $"Checked Out";
             await DisplayAlert("Checked out", "Successfully checked out", "OK");
 
         SemanticScreenReader.Announce(CheckOutBtn.Text);
