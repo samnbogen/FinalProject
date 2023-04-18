@@ -12,9 +12,6 @@
     <MauiXaml Update="HistoryPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="LoginPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
     <MauiXaml Update="OnHoldPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
