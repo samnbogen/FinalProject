@@ -1,30 +1,28 @@
-﻿using FinalProject.Data;
-using FinalProject.Entities;
+﻿using FinalProject.Entities;
 using System.Collections;
+using FinalProject.Data;
 
 namespace FinalProject;
 
 public partial class SearchPage : ContentPage 
 {
-	int count = 0;
+	//int count = 0;
 
 	public SearchPage() 
 	{
-        InitializeComponent();
+        InitializeComponent(); 
 
-		LibraryDatabase db= new LibraryDatabase();
+		LibraryDatabase dta= new LibraryDatabase();
 
-		List<Book> listOfBooks = db.Select();
-		List<string> books = new List<string>();
+		List<Book> list = dta.Select(); 
+		List<string> strings = new List<string>();
 
-		foreach(Book book in listOfBooks)
+		foreach(Book book in list)
 		{
-			books.Add(book.Display());
-        }
+			strings.Add(book.Display());
+		}
 
-
-
-		booksList.ItemsSource = books;
+		listBook.ItemsSource = strings;
     }
 
 	//private void OnCounterClicked(object sender, EventArgs e)
