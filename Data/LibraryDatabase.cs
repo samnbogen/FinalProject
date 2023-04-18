@@ -143,6 +143,8 @@ namespace FinalProject.Data
         {
             string query = "SELECT * FROM books";
 
+            //Create a list to store the a book's properties/attributes
+            
 
             // how to display the books?
             //1. then use this list to create a book class and then add it to another list which is gonna behe list of books?
