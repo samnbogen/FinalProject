@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\Project\\FinalProject.csproj": {}
+    "C:\\finalproject\\FinalProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\Project\\FinalProject.csproj": {
+    "C:\\finalproject\\FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\Project\\FinalProject.csproj",
+        "projectUniqueName": "C:\\finalproject\\FinalProject.csproj",
         "projectName": "FinalProject",
-        "projectPath": "C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\Project\\FinalProject.csproj",
+        "projectPath": "C:\\finalproject\\FinalProject.csproj",
         "packagesPath": "C:\\Users\\izalu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\Project\\obj\\",
+        "outputPath": "C:\\finalproject\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
@@ -70,10 +70,6 @@
               "target": "Package",
               "version": "[6.0.548, )",
               "autoReferenced": true
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.2.5, )"
             }
           },
           "imports": [
@@ -177,10 +173,6 @@
               "version": "[6.0.548, )",
               "autoReferenced": true
             },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.2.5, )"
-            },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
               "version": "[6.0.1, )",
@@ -263,10 +255,6 @@
               "target": "Package",
               "version": "[6.0.548, )",
               "autoReferenced": true
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.2.5, )"
             },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
@@ -357,10 +345,6 @@
               "target": "Package",
               "version": "[10.0.22000.194, )",
               "autoReferenced": true
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.2.5, )"
             }
           },
           "imports": [
