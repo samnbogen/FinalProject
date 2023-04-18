@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Android.Provider;
+using FinalProject.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,6 +71,29 @@ namespace FinalProject.Entities
             return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_FirstName} {status}";
         }
 
-        
+        public void placeHold()
+        {
+            if (this.Is_Available == true) 
+            {
+                this.Is_Available = false;
+            }
+            else
+            {
+                throw new BookAvailabilityException();
+            }
+            
+        }
+
+        public void cancelHold()
+        {
+            if (this.Is_Available == false)
+            {
+                this.Is_Available = true;
+            }
+            else
+            {
+                throw new BookAvailabilityException();
+            }
+        }
     }
 }
