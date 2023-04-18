@@ -163,12 +163,12 @@ namespace FinalProject.Data
                 while (dataReader.Read())
                 {
 
-                    Book book = new Book((string)dataReader["title"],
-                                         (string)dataReader["isbn"],
-                                         (string)dataReader["f_name"],
-                                         (string)dataReader["l_name"],
-                                         (string)dataReader["publisher"],
-                                         (string)dataReader["genre"]);
+                    Book book = new Book(dataReader.GetString(0),
+                                            dataReader.GetString(1),
+                                            dataReader.GetString(2),
+                                            dataReader.GetString(3),
+                                            dataReader.GetString(4),
+                                            dataReader.GetString(5));
 
                     // now add this book with its book properties to books
                     books.Add(book);
