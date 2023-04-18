@@ -25014,24 +25014,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sohee\\.nuget\\packages\\": {},
+    "C:\\Users\\izalu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sohee\\source\\repos\\FinalProject\\FinalProject.csproj",
+      "projectUniqueName": "C:\\finalproject\\FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "C:\\Users\\sohee\\source\\repos\\FinalProject\\FinalProject.csproj",
-      "packagesPath": "C:\\Users\\sohee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sohee\\source\\repos\\FinalProject\\obj\\",
+      "projectPath": "C:\\finalproject\\FinalProject.csproj",
+      "packagesPath": "C:\\Users\\izalu\\.nuget\\packages\\",
+      "outputPath": "C:\\finalproject\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\sohee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\izalu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -25478,7 +25478,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\sohee\\source\\repos\\FinalProject\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file C:\\finalproject\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }

@@ -14,11 +14,7 @@
         Title="On Hold"
         ContentTemplate="{DataTemplate local:OnHoldPage}"
         Route="OnHoldPage" />
-        <ShellContent
-        Title="Checkout"
-        ContentTemplate="{DataTemplate local:CheckoutPage}"
-        Route="CheckoutPage" />
-
+        
     </TabBar>
     
 
