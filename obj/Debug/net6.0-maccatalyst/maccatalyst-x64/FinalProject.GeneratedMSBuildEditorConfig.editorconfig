@@ -22,17 +22,17 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/sohee/source/repos/FinalProject/CheckoutPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.CheckoutPage.xaml
-build_metadata.AdditionalFiles.TargetPath = CheckoutPage.xaml
-build_metadata.AdditionalFiles.RelativePath = CheckoutPage.xaml
-
 [C:/Users/sohee/source/repos/FinalProject/OnHoldPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.OnHoldPage.xaml
 build_metadata.AdditionalFiles.TargetPath = OnHoldPage.xaml
 build_metadata.AdditionalFiles.RelativePath = OnHoldPage.xaml
+
+[C:/Users/sohee/source/repos/FinalProject/ReservePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.ReservePage.xaml
+build_metadata.AdditionalFiles.TargetPath = ReservePage.xaml
+build_metadata.AdditionalFiles.RelativePath = ReservePage.xaml
 
 [C:/Users/sohee/source/repos/FinalProject/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
