@@ -3,34 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProject.SearchPage">
 
-    <!--<ScrollView>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-
-            <Label Grid.Row="0" Grid.Column="0" Text="Title" />
-            <Label Grid.Row="0" Grid.Column="1" Text="ISBN" />
-            <Label Grid.Row="0" Grid.Column="2" Text="First Name" />
-            <Label Grid.Row="0" Grid.Column="3" Text="Last Name" />
-            <Label Grid.Row="0" Grid.Column="4" Text="Publisher" />
-            <Label Grid.Row="0" Grid.Column="5" Text="Genre" />
-        </Grid>
+    <ListView x:Name="booksList" BackgroundColor="Transparent">
         
-    </ScrollView>-->
+    </ListView>
+        
 
 </ContentPage>

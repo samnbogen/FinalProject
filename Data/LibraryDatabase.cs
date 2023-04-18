@@ -1,5 +1,5 @@
 ﻿using FinalProject.Entities;
-//using MySqlConnector;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -144,8 +144,7 @@ namespace FinalProject.Data
             string query = "SELECT * FROM books";
 
             //Create a list to store the a book's properties/attributes
-            ArrayList bookProperties = new ArrayList();
-
+            
 
             // how to display the books?
             //1. then use this list to create a book class and then add it to another list which is gonna behe list of books?
@@ -153,7 +152,7 @@ namespace FinalProject.Data
             //2. or just just display the book's properties in one row
 
             // let's try 1 for now
-            List<Book> books = new ArrayList();
+            List<Book> books = new List<Book>();
             //Open connection
             if (this.OpenConnection() == true)
             {
@@ -165,12 +164,6 @@ namespace FinalProject.Data
                 //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-                    //bookProperties.Add(dataReader["title"] + "");
-                    //bookProperties.Add(dataReader["isbn"] + "");
-                    //bookProperties.Add(dataReader["f_name"] + "");
-                    //bookProperties.Add(dataReader["l_name"] + "");
-                    //bookProperties.Add(dataReader["publisher"] + "");
-                    //bookProperties.Add(dataReader["genre"] + "");
 
                     Book book = new Book((string)dataReader["title"],
                                          (string)dataReader["isbn"],
