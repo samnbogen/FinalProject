@@ -22,7 +22,9 @@ public partial class SearchPage : ContentPage
 			strings.Add(book.Display());
 		}
 
-		listBook.ItemsSource = strings;
+		listBooks.ItemsSource = strings;
+		
+		
     }
 
 	//private void OnCounterClicked(object sender, EventArgs e)
