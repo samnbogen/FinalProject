@@ -10,24 +10,39 @@ namespace FinalProject.Entities
     {
 
         public string Title { get; set; }
-        public long Isbn { get; set; }
-        public string Author { get; set; }
+        public string Isbn { get; set; }
+        public string Author_FirstName { get; set; }
+
+        public string Author_LastName { get; set; }
         public string Publisher { get; set; }
         public string Genre { get; set; }
-        public bool Status { get; set; }
+        public bool Is_Available { get; set; }
 
         public Book()
         {
 
         }
-        public Book(string title, string author, string publisher, string genre, long isbn, bool status)
+
+        public Book(string title, string isbn, string f_name, string l_name, string publisher, string genre)
         {
             this.Title = title;
-            this.Author = author;
+            this.Isbn = isbn;
+            this.Author_FirstName = f_name;
+            this.Author_LastName = l_name;
             this.Publisher = publisher;
             this.Genre = genre;
+            this.Is_Available = true;
+        }
+
+        public Book(string title, string isbn, string f_name, string l_name, string publisher, string genre, bool is_available)
+        {
+            this.Title = title;
             this.Isbn = isbn;
-            this.Status = status;
+            this.Author_FirstName = f_name;
+            this.Author_LastName = l_name;
+            this.Publisher = publisher;
+            this.Genre = genre;
+            this.Is_Available = is_available;
         }
 
         public string CheckOut()
@@ -42,6 +57,16 @@ namespace FinalProject.Entities
         {
             //Not sure how to make this function
 
+        }
+
+        public string Display()
+        {
+            string status = "In Use";
+            if (this.Is_Available)
+            {
+                status = "Available";
+            }
+            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_FirstName} {status}";
         }
     }
 }

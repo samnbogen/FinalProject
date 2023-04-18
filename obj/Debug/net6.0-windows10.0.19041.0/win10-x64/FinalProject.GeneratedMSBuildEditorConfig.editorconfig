@@ -8,57 +8,51 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FinalProject
-build_property.ProjectDir = C:\Users\sohee\source\repos\FinalProject\
+build_property.ProjectDir = C:\finalproject\
 
-[C:/Users/sohee/source/repos/FinalProject/App.xaml]
+[C:/finalproject/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/sohee/source/repos/FinalProject/AppShell.xaml]
+[C:/finalproject/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/sohee/source/repos/FinalProject/CheckoutPage.xaml]
+[C:/finalproject/CheckoutPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.CheckoutPage.xaml
 build_metadata.AdditionalFiles.TargetPath = CheckoutPage.xaml
 build_metadata.AdditionalFiles.RelativePath = CheckoutPage.xaml
 
-[C:/Users/sohee/source/repos/FinalProject/HistoryPage.xaml]
+[C:/finalproject/HistoryPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.HistoryPage.xaml
 build_metadata.AdditionalFiles.TargetPath = HistoryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = HistoryPage.xaml
 
-[C:/Users/sohee/source/repos/FinalProject/LoginPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.LoginPage.xaml
-build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
-build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
-
-[C:/Users/sohee/source/repos/FinalProject/OnHoldPage.xaml]
+[C:/finalproject/OnHoldPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.OnHoldPage.xaml
 build_metadata.AdditionalFiles.TargetPath = OnHoldPage.xaml
 build_metadata.AdditionalFiles.RelativePath = OnHoldPage.xaml
 
-[C:/Users/sohee/source/repos/FinalProject/Resources/Styles/Colors.xaml]
+[C:/finalproject/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/sohee/source/repos/FinalProject/Resources/Styles/Styles.xaml]
+[C:/finalproject/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/sohee/source/repos/FinalProject/SearchPage.xaml]
+[C:/finalproject/SearchPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.SearchPage.xaml
 build_metadata.AdditionalFiles.TargetPath = SearchPage.xaml

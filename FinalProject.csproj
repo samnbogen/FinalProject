@@ -49,6 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="MySqlConnector" Version="2.2.5" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="HistoryPage.xaml.cs">
 	    <DependentUpon>HistoryPage.xaml</DependentUpon>
 	  </Compile>
@@ -62,9 +66,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="HistoryPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="OnHoldPage.xaml">
