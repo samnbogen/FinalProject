@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.CataloguePage"
+             Title="CataloguePage">
+
+    
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>            
+        </Grid.ColumnDefinitions>
+
+        <Picker x:Name="genre"
+        Grid.Column="0"
+        Title="Select a Genre"
+        SelectedIndexChanged="OnPickerSelectedIndexChanged"
+        TitleColor="MediumVioletRed">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Fantasy</x:String>
+                    <x:String>Science Fiction</x:String>
+                    <x:String>Fiction</x:String>
+                    <x:String>Satire</x:String>
+                    <x:String>Romance</x:String>
+                    <x:String>Mystery</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label x:Name = "genreLabel" Grid.Column="1"/>
+
+        <ListView x:Name = "spot3" Grid.Column="2"></ListView>
+
+    </Grid>
+
+
+</ContentPage>

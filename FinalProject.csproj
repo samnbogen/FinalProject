@@ -53,6 +53,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="HistoryPage.xaml.cs">
+	    <DependentUpon>HistoryPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Catalogue.xaml.cs">
+	    <DependentUpon>Catalogue.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="SearchPage.xaml.cs">
 	    <DependentUpon>SearchPage.xaml</DependentUpon>
 	  </Compile>
@@ -62,7 +68,10 @@
 	  <MauiXaml Update="CheckoutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="OnHoldPage.xaml">
+	  <MauiXaml Update="HistoryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Catalogue.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

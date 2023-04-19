@@ -11,9 +11,9 @@
         ContentTemplate="{DataTemplate local:SearchPage}"
         Route="SearchPage" />
         <ShellContent
-        Title="On Hold"
-        ContentTemplate="{DataTemplate local:OnHoldPage}"
-        Route="OnHoldPage" />
+        Title="Catalogue"
+        ContentTemplate="{DataTemplate local:CataloguePage}"
+        Route="CataloguePage" />
         
     </TabBar>
     

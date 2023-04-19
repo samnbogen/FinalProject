@@ -9,7 +9,7 @@
     <MauiXaml Update="CheckoutPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="OnHoldPage.xaml">
+    <MauiXaml Update="Catalogue.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>
