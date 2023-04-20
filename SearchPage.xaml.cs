@@ -36,6 +36,7 @@ public partial class SearchPage : ContentPage
     public Book selectedBook;
 
 
+
     private async void OnToCartClicked(object sender, EventArgs e)
     {
         count++;
@@ -46,6 +47,8 @@ public partial class SearchPage : ContentPage
             SelectedBooks.Add((Book)listBooks.SelectedItem);
 
             await DisplayAlert("Alert", "Check your book cart.", "Confirm");
+
+            SearchPage.SelectedBooks = SelectedBooks;
 
             listBooks.SelectedItem = null;
         }

@@ -63,20 +63,20 @@
                             FontAttributes="Bold"/>
 
                             <Label Grid.Row="0" Grid.Column="3"
-                    Text="by"
-                    FontAttributes="None"/>
+                            Text="by"
+                            FontAttributes="None"/>
 
                             <Label Grid.Row="0"
-                    Grid.Column="5"
-                    Text="{Binding Author_FirstName}"
-                    FontAttributes="Italic"
-                    HorizontalOptions="Start"/>
+                            Grid.Column="5"
+                            Text="{Binding Author_FirstName}"
+                            FontAttributes="Italic"
+                            HorizontalOptions="Start"/>
 
                             <Label Grid.Row="0"
-                    Grid.Column="7"
-                    Text="{Binding Author_LastName}"
-                    FontAttributes="Italic"
-                    HorizontalOptions="Start"/>
+                            Grid.Column="7"
+                            Text="{Binding Author_LastName}"
+                            FontAttributes="Italic"
+                            HorizontalOptions="Start"/>
 
                         </Grid>
                     </DataTemplate>
