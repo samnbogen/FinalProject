@@ -71,8 +71,7 @@ public partial class CataloguePage : ContentPage
                 stringMystery.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
             }
         } 
-    }      
-        
+    }            
 
     void OnPickerSelectedIndexChanged(object sender, EventArgs e)
     {

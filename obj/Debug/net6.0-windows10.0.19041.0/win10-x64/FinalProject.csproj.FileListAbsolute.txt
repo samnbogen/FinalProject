@@ -1452,3 +1452,4 @@ C:\Users\sohee\source\repos\FinalProject\obj\Debug\net6.0-windows10.0.19041.0\wi
 C:\Users\sohee\source\repos\FinalProject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\sohee\source\repos\FinalProject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\sohee\source\repos\FinalProject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\bookstack.scale-100.jpeg
