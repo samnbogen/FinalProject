@@ -9,27 +9,27 @@ using System.Xml;
 
 public partial class CataloguePage : ContentPage
 {
-    
-    List<string> string1 = new List<string>();
-    List<string> string2 = new List<string>();
-    List<string> string3 = new List<string>();
-    List<string> string4 = new List<string>();
-    List<string> string5 = new List<string>();
-    List<string> string6 = new List<string>();
+    //create a string for every genre
+    List<string> stringFantasy = new List<string>();
+    List<string> stringSciFi = new List<string>();
+    List<string> stringFiction = new List<string>();
+    List<string> stringSatire = new List<string>();
+    List<string> stringRomance = new List<string>();
+    List<string> stringMystery = new List<string>();
     public CataloguePage()
 	{
 		InitializeComponent();
 
+        //creating a list for the database
         LibraryDatabase dta = new LibraryDatabase();
-
         List<Book> list = dta.Select();
 
-
+        //populating each list with the appropriate genre
         foreach (Book book in list)
         {
             if (book.Genre == "Fantasy")
             {
-                string1.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);               
+                stringFantasy.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);               
             }
         }
 
@@ -37,7 +37,7 @@ public partial class CataloguePage : ContentPage
         {
             if (book.Genre == "Science Fiction")
             {
-                string2.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);                
+                stringSciFi.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);                
             }
         }
 
@@ -45,7 +45,7 @@ public partial class CataloguePage : ContentPage
         {
             if (book.Genre == "Fiction")
             {
-                string3.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
+                stringFiction.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
             }
         }
 
@@ -53,7 +53,7 @@ public partial class CataloguePage : ContentPage
         {
             if (book.Genre == "Satire")
             {
-                string4.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
+                stringSatire.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
             }
         }
 
@@ -61,7 +61,7 @@ public partial class CataloguePage : ContentPage
         {
             if (book.Genre == "Romance")
             {
-                string5.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
+                stringRomance.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
             }
         }
 
@@ -69,12 +69,10 @@ public partial class CataloguePage : ContentPage
         {
             if (book.Genre == "Mystery")
             {
-                string6.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
+                stringMystery.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
             }
-        }           
-
-    }
-      
+        } 
+    }      
         
 
     void OnPickerSelectedIndexChanged(object sender, EventArgs e)
@@ -83,33 +81,35 @@ public partial class CataloguePage : ContentPage
         int selectedIndex = picker.SelectedIndex;
 
         if (selectedIndex != -1)
-        {
+        {            
+            //adding the selected genre to Label 
             genreLabel.Text = picker.Items[selectedIndex];
+            
+            //checking the index of the selected genre and giving the appropriate list for it
             if (picker.SelectedIndex == 0)
             {
-                spot3.ItemsSource = string1;
+                spot3.ItemsSource = stringFantasy;
             }
             if (picker.SelectedIndex == 1)
             {
-                spot3.ItemsSource = string2;
+                spot3.ItemsSource = stringSciFi;
             }
             if (picker.SelectedIndex == 2)
             {
-                spot3.ItemsSource = string3;
+                spot3.ItemsSource = stringFiction;
             }
             if (picker.SelectedIndex == 3)
             {
-                spot3.ItemsSource = string4;
+                spot3.ItemsSource = stringSatire;
             }
             if (picker.SelectedIndex == 4)
             {
-                spot3.ItemsSource = string5;
+                spot3.ItemsSource = stringRomance;
             }
             if (picker.SelectedIndex == 5)
             {
-                spot3.ItemsSource = string6;
+                spot3.ItemsSource = stringMystery;
             }
-
         }
     }
 }
