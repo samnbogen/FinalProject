@@ -15,9 +15,9 @@
         ContentTemplate="{DataTemplate local:OnHoldPage}"
         Route="OnHoldPage" />
         <ShellContent
-        Title="Check Out"
-        ContentTemplate="{DataTemplate local:CheckoutPage}"
-        Route="CheckoutPage" />
+        Title="Catalogue Page"
+        ContentTemplate="{DataTemplate local:CataloguePage}"
+        Route="CataloguePage" />
         
     </TabBar>
     
