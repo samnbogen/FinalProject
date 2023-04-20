@@ -53,13 +53,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ReservePage.xaml.cs">
+	    <DependentUpon>ReservePage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="SearchPage.xaml.cs">
 	    <DependentUpon>SearchPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="CheckoutPage.xaml">
+	  <MauiXaml Update="ReservePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="OnHoldPage.xaml">

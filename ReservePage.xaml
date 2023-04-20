@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FinalProject.CheckoutPage">
+             x:Class="FinalProject.ReservePage">
 
 <ScrollView>
     <VerticalStackLayout
@@ -20,7 +20,7 @@
 
 
         <ScrollView>
-            <Grid ColumnSpacing="10" RowSpacing="10">
+            <Grid ColumnSpacing="10" RowSpacing="10" HorizontalOptions="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
@@ -50,10 +50,10 @@
         </ScrollView>
         
         <Button
-            x:Name="CheckOutBtn"
-            Text="Check out"
+            x:Name="ReserveBtn"
+            Text="Reserve"
             SemanticProperties.Hint="Counts the number of times you click"
-            Clicked="OnCheckoutClicked"
+            Clicked="OnReserveClicked"
             HorizontalOptions="Center" />
 
 

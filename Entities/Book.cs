@@ -1,4 +1,4 @@
-﻿using Android.Provider;
+﻿//using Android.Provider;
 using FinalProject.Exceptions;
 using System;
 using System.Collections.Generic;
@@ -47,12 +47,12 @@ namespace FinalProject.Entities
             this.Is_Available = is_available;
         }
 
-        public string CheckOut()
+        public string ReserveBook()
         {
             DateTime currentDate = DateTime.Now;
-            DateTime checkoutDate = currentDate.AddDays(21);
+            DateTime dueDate = currentDate.AddDays(2);
 
-            return checkoutDate.ToString("D");
+            return dueDate.ToString("D");
         }
 
         public void Returned()

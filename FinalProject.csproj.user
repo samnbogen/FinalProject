@@ -6,7 +6,7 @@
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="CheckoutPage.xaml">
+    <MauiXaml Update="ReservePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="OnHoldPage.xaml">
