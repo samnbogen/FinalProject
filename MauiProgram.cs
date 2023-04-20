@@ -2,8 +2,6 @@
 
 public static class MauiProgram
 {
-	//lisa lisa lisa lisa
-	// iza iza iza
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
@@ -16,8 +14,5 @@ public static class MauiProgram
 			});
 
 		return builder.Build();
-
-
-
 	}
 }

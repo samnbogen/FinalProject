@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject.Data
 {
+
     // for connecting to the database
     public class LibraryDatabase
     {
@@ -124,7 +125,7 @@ namespace FinalProject.Data
             }
         }
 
-        //Delete statement
+        //Delete statement - not working yet for our database:finale
         public void Delete()
         {
             //string query = "DELETE FROM tableinfo WHERE name='John Smith'";
@@ -144,7 +145,7 @@ namespace FinalProject.Data
             string query = "SELECT * FROM books";
 
             //Create a list to store the a book's properties/attributes
-            
+
 
             // how to display the books?
             //1. then use this list to create a book class and then add it to another list which is gonna behe list of books?
@@ -295,5 +296,99 @@ namespace FinalProject.Data
             }
 
         }
+
+        public List<Book> SelectABook()
+        {
+            string query = "SELECT * FROM books ORDER BY RAND() LIMIT 1";
+
+            List<Book> randomBook = new List<Book>();
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+
+                    Book book = new Book(dataReader.GetString(0),
+                                            dataReader.GetString(1),
+                                            dataReader.GetString(2),
+                                            dataReader.GetString(3),
+                                            dataReader.GetString(4),
+                                            dataReader.GetString(5));
+
+                    // now add this book with its book properties to books
+                    randomBook.Add(book);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return randomBook;
+            }
+            else
+            {
+                return randomBook;
+            }
+
+        }
+
+
+        ///<summary>
+        /// searches the library database for a book and returns a list of related books
+        ///</summary>
+        public List<Book> SearchBook(string searchword)
+        {
+            List<Book> results = new List<Book>();
+
+            string query = $"SELECT * FROM books where Title Like '%{searchword}%'";
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+
+                    Book book = new Book(dataReader.GetString(0),
+                                            dataReader.GetString(1),
+                                            dataReader.GetString(2),
+                                            dataReader.GetString(3),
+                                            dataReader.GetString(4),
+                                            dataReader.GetString(5));
+
+                    // add the book to the results
+                    results.Add(book);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return results;
+            }
+            else
+            {
+                return results;
+
+            }
+
+        }
+
     }
 }
