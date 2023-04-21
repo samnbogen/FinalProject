@@ -349,7 +349,7 @@ namespace FinalProject.Data
         {
             List<Book> results = new List<Book>();
 
-            string query = $"SELECT * FROM books where Title Like '%{searchword}%'";
+            string query = $"SELECT * FROM books where Title Like '%{searchword}%' or f_name Like '%{searchword}%' or l_name Like '%{searchword}%'";
             //Open connection
             if (this.OpenConnection() == true)
             {

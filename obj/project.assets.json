@@ -25014,24 +25014,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\samnb\\.nuget\\packages\\": {},
+    "C:\\Users\\izalu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\finalproject\\FinalProject.csproj",
+      "projectUniqueName": "C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\FinalProject\\FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "C:\\finalproject\\FinalProject.csproj",
-      "packagesPath": "C:\\Users\\samnb\\.nuget\\packages\\",
-      "outputPath": "C:\\finalproject\\obj\\",
+      "projectPath": "C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\FinalProject\\FinalProject.csproj",
+      "packagesPath": "C:\\Users\\izalu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\izalu\\OneDrive - Southern Alberta Institute of Technology\\Winter2023\\CPRG211-OOP2\\FinalProject\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\samnb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\izalu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
