@@ -1,6 +1,7 @@
 ﻿using FinalProject.Entities;
 using System.Collections;
 using FinalProject.Data;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace FinalProject;
 
@@ -21,20 +22,25 @@ public partial class SearchPage : ContentPage
 
         //get all the books in the database and store in a list called books
         Books = db.Select();
+               
 
         // turn the books into a string; may need it later
         //foreach(Book book in Books)
         //{
         //	strings.Add(book.Display());
         //}
-
-        listBooks.ItemsSource = Books;
+        foreach(Book book in Books)
+        {
+            if (book.Is_Available == true)
+            {
+                listBooks.ItemsSource = Books;
+            }
+        }        
     }
 
     // a list for storing the selected books
     public static List<Book> SelectedBooks = new List<Book>();
     public Book selectedBook;
-
 
 
     private async void OnToCartClicked(object sender, EventArgs e)
@@ -49,6 +55,9 @@ public partial class SearchPage : ContentPage
             await DisplayAlert("Alert", "Check your book cart.", "Confirm");
 
             SearchPage.SelectedBooks = SelectedBooks;
+            Book book = new Book();
+            book = SelectedBooks.LastOrDefault();
+            book.placeHold();
 
             listBooks.SelectedItem = null;
         }
@@ -71,15 +80,13 @@ public partial class SearchPage : ContentPage
         List<Book> results = db.SearchBook(e.NewTextValue);
         if (results.Count > 0)
         {
-            listBooks.ItemsSource = results;
+            listBooks.ItemsSource = results;            
         }
         else
         {
             await DisplayAlert("Alert", "No Book found", "Ok");
         }
-
     }
-
 
     /// <summary>
     /// Handles what happens when user clickes search btn (the magnifying glass icon)

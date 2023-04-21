@@ -1453,3 +1453,10 @@ C:\Users\sohee\source\repos\FinalProject\obj\Debug\net6.0-windows10.0.19041.0\wi
 C:\Users\sohee\source\repos\FinalProject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\sohee\source\repos\FinalProject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\bookstack.scale-100.jpeg
+C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\bookheader.scale-100.jpg
+C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\fantasy.scale-100.png
+C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\fiction.scale-100.png
+C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\mystery.scale-100.png
+C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\romance.scale-100.png
+C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\satire.scale-100.png
+C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\scifi.scale-100.png

@@ -5,6 +5,8 @@ using System;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml;
+//using Windows.Media.Miracast;
+//using Windows.Services.Maps.LocalSearch;
 
 public partial class CataloguePage : ContentPage
 {
@@ -15,99 +17,60 @@ public partial class CataloguePage : ContentPage
     List<string> stringSatire = new List<string>();
     List<string> stringRomance = new List<string>();
     List<string> stringMystery = new List<string>();
+
+    
+    public List<Book> Books = new List<Book>();
     public CataloguePage()
 	{
 		InitializeComponent();
 
+        genre.SelectedIndex = 1;
+
         //creating a list for the database
         LibraryDatabase dta = new LibraryDatabase();
         List<Book> list = dta.Select();
-
-        //populating each list with the appropriate genre
-        foreach (Book book in list)
-        {
-            if (book.Genre == "Fantasy")
-            {
-                stringFantasy.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);               
-            }
-        }
-
-        foreach (Book book in list)
-        {
-            if (book.Genre == "Science Fiction")
-            {
-                stringSciFi.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);                
-            }
-        }
-
-        foreach (Book book in list)
-        {
-            if (book.Genre == "Fiction")
-            {
-                stringFiction.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
-            }
-        }
-
-        foreach (Book book in list)
-        {
-            if (book.Genre == "Satire")
-            {
-                stringSatire.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
-            }
-        }
-
-        foreach (Book book in list)
-        {
-            if (book.Genre == "Romance")
-            {
-                stringRomance.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
-            }
-        }
-
-        foreach (Book book in list)
-        {
-            if (book.Genre == "Mystery")
-            {
-                stringMystery.Add(book.Title + " By " + book.Author_FirstName + book.Author_LastName);
-            }
-        } 
     }            
 
-    void OnPickerSelectedIndexChanged(object sender, EventArgs e)
+    public static List<Book> SelectedBooks = new List<Book>();
+    public Book selectedBook;
+
+    private void OnPickerSelectedIndexChanged(object sender, EventArgs e)
     {
         var picker = (Picker)sender;
         int selectedIndex = picker.SelectedIndex;
+        string name = picker.Items[selectedIndex];
 
-        if (selectedIndex != -1)
-        {            
-            //adding the selected genre to Label 
-            genreLabel.Text = picker.Items[selectedIndex];
+        //adding the selected genre to Label 
+        genreLabel.Text = picker.Items[selectedIndex];
+
+        if (selectedIndex != -1) 
+        {
+            LibraryDatabase db = new LibraryDatabase();
+            List<Book> results = db.SearchGenre(name);
+            spot3.ItemsSource = results;
+
+            foreach (Book book in results)
+            {
+                if (book.Genre == "Fantasy")
+                myImage.Source = "fantasy.png";
+
+                if (book.Genre == "Fiction")
+                myImage.Source = "fiction.png";
+
+                if (book.Genre == "Mystery")
+                myImage.Source = "mystery.png";
+
+                if (book.Genre == "Science Fiction")
+                myImage.Source = "scifi.png";
+
+                if (book.Genre == "Satire")
+                myImage.Source = "satire.png";
+
+                if (book.Genre == "Romance")
+                myImage.Source = "romance.png";
+                
+            }
             
-            //checking the index of the selected genre and giving the appropriate list for it
-            if (picker.SelectedIndex == 0)
-            {
-                spot3.ItemsSource = stringFantasy;
-            }
-            if (picker.SelectedIndex == 1)
-            {
-                spot3.ItemsSource = stringSciFi;
-            }
-            if (picker.SelectedIndex == 2)
-            {
-                spot3.ItemsSource = stringFiction;
-            }
-            if (picker.SelectedIndex == 3)
-            {
-                spot3.ItemsSource = stringSatire;
-            }
-            if (picker.SelectedIndex == 4)
-            {
-                spot3.ItemsSource = stringRomance;
-            }
-            if (picker.SelectedIndex == 5)
-            {
-                spot3.ItemsSource = stringMystery;
-            }
-        }
+        }  
     }
 }

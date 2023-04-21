@@ -4,9 +4,6 @@
              x:Class="FinalProject.OnHoldPage"
              Title="OnHoldPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <ListView x:Name="onholdlist"></ListView>        
     </VerticalStackLayout>
 </ContentPage>

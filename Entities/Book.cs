@@ -1,8 +1,10 @@
 ﻿//using Android.Provider;
 using FinalProject.Exceptions;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +16,6 @@ namespace FinalProject.Entities
         public string Title { get; set; }
         public string Isbn { get; set; }
         public string Author_FirstName { get; set; }
-
         public string Author_LastName { get; set; }
         public string Publisher { get; set; }
         public string Genre { get; set; }
@@ -58,7 +59,6 @@ namespace FinalProject.Entities
         public void Returned()
         {
             //Not sure how to make this function
-
         }
 
         public string Display()
@@ -68,7 +68,7 @@ namespace FinalProject.Entities
             {
                 status = "Available";
             }
-            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_FirstName} {status}";
+            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_LastName} {status}";
         }
 
         public void placeHold()
@@ -80,8 +80,7 @@ namespace FinalProject.Entities
             else
             {
                 throw new BookAvailabilityException();
-            }
-            
+            }            
         }
 
         public void cancelHold()

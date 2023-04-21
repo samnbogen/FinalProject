@@ -68,17 +68,23 @@ public partial class ReservePage : ContentPage
     //    base.OnAppearing();
     //}
 
-    Book book = new Book();
+    //Book book = new Book();
     //public Book selectedBook;
 
     private async void OnReserveClicked(object sender, EventArgs e)
     {
         count++;
 
+        Book book = new Book();
+        book = SearchPage.SelectedBooks.FirstOrDefault();
+
         if (count >= 1)
             await DisplayAlert("Alert", "Successfully reserved. Pick up the book by " + book.ReserveBook(), "Confirm");
 
         SemanticScreenReader.Announce(ReserveBtn.Text);
+        
+        book.placeHold();
+
     }
 
 }

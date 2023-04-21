@@ -6,38 +6,54 @@
 
     <Grid Margin="20,35,20,20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="35"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>            
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>        
-        
-        
-        <BoxView Grid.Row="2"
-                 Color="DarkSlateBlue" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
 
-        <Image Source="bookstack.jpeg" Grid.Row="0" Aspect="AspectFit"></Image>     
+        
 
-        <Label Text="Welcome to the Library!" 
-        TextColor="CornflowerBlue"
+        <Image Source="bookheader.jpg" Grid.Row="0" Grid.ColumnSpan="2" Aspect="AspectFit"></Image>
+        
+        <Border StrokeThickness="4"
+        StrokeShape="RoundRectangle 40,0,0,40"
+        BackgroundColor="BlanchedAlmond"     
+        Padding="16,8"
+        HorizontalOptions="Center">
+            <Border.Stroke>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="Orange"
+                          Offset="0.1" />
+                    <GradientStop Color="DarkSlateBlue"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Stroke>
+            <Label Text="Welcome to the Library!" 
+        TextColor="DarkSlateBlue"
         TextDecorations="Underline"
         FontAttributes="Bold"
         Grid.Row="0"
+        Grid.ColumnSpan="2"
         HorizontalOptions="Center"
         VerticalOptions="Center"
-        FontSize="26"></Label>
+        FontSize="32"></Label>
+        </Border>
 
         <Picker x:Name="genre"
         Grid.Row="1"
-        Title="Select a Genre"
-        SelectedIndexChanged="OnPickerSelectedIndexChanged"
+        Grid.ColumnSpan="2"
+        Title="Change the Genre"
+        SelectedIndexChanged="OnPickerSelectedIndexChanged"        
         HorizontalOptions="Center"
         VerticalOptions="Center"
         FontSize="16"
-        TitleColor="MediumVioletRed">
+        FontAttributes="Bold"
+        TitleColor="DarkSlateBlue">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Fantasy</x:String>
@@ -49,18 +65,75 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        
+
+        <BoxView Grid.Row="2" Grid.ColumnSpan="2"
+                 Color="DarkSlateBlue" />
+
         <Label x:Name = "genreLabel" 
+        Text="{Binding Source={x:Reference genre}, Path=SelectedItem}" 
         Grid.Row="2"
+        Grid.ColumnSpan="2"
         HorizontalOptions="Center"
         VerticalOptions="Center"
-        FontSize="20"/>
+        FontSize="20"/>        
 
-        <ListView x:Name = "spot3" Grid.Row="3"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"></ListView>
+        <Image x:Name="myImage" 
+               WidthRequest="75" 
+               HeightRequest="75"
+               HorizontalOptions="End"
+               Aspect="AspectFit" 
+               Grid.Row="3" 
+               Grid.Column="0"/>
 
+        <!--List of books called listBooks-->
+        <CollectionView
+        Grid.Row="3"
+        Grid.Column="1"
+        x:Name="spot3"
+        SelectionMode="Single"
+            VerticalOptions="Center"
+            HorizontalOptions="Start">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="25" ColumnSpacing="10" RowSpacing="1">                         
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />                            
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <!---rectangle-->
+                            <ColumnDefinition Width="Auto" />
+                            <!--Title-->                            
+                            <ColumnDefinition Width="Auto"/>
+                            <!--by-->                            
+                            <ColumnDefinition Width="Auto" />
+                            <!--Firstname-->
+                            <ColumnDefinition Width="Auto" />
+                            <!--lastname-->
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>                        
+
+                        <Label Grid.Row="0" Grid.Column="1"
+                            Text="{Binding Title}"
+                            FontAttributes="Bold"/>
+
+                        <Label Grid.Row="0" Grid.Column="2"
+                            Text="by"
+                            FontAttributes="None"/>
+
+                        <Label Grid.Row="0"
+                            Grid.Column="3"
+                            Text="{Binding Author_FirstName}"
+                            FontAttributes="Italic"/>
+
+                        <Label Grid.Row="0"
+                            Grid.Column="4"
+                            Text="{Binding Author_LastName}"
+                            FontAttributes="Italic"/>
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
-
-
 </ContentPage>

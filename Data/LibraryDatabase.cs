@@ -1,9 +1,12 @@
 ﻿using FinalProject.Entities;
+using Microsoft.UI.Xaml.Input;
 using MySqlConnector;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +24,7 @@ namespace FinalProject.Data
         public LibraryDatabase()
         {
             Initialize();
+
         }
 
         //Initialize the values needed for the connection
@@ -66,7 +70,6 @@ namespace FinalProject.Data
             }
         }
 
-
         //Close connection
         private bool CloseConnection()
         {
@@ -100,7 +103,6 @@ namespace FinalProject.Data
                 this.CloseConnection();
             }
         }
-
 
         //Update statement
         public void Update()
@@ -216,7 +218,6 @@ namespace FinalProject.Data
             {
                 return Count;
             }
-
         }
 
         ////Backup
@@ -238,7 +239,6 @@ namespace FinalProject.Data
                 path = "C:\\MyFinaleBooksBackup" + year + "-" + month + "-" + day +
             "-" + hour + "-" + minute + "-" + second + "-" + millisecond + ".sql";
                 StreamWriter file = new StreamWriter(path);
-
 
                 ProcessStartInfo psi = new ProcessStartInfo();
                 psi.FileName = "myFinaleBooksdump";
@@ -361,14 +361,59 @@ namespace FinalProject.Data
                 //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-
                     Book book = new Book(dataReader.GetString(0),
-                                            dataReader.GetString(1),
-                                            dataReader.GetString(2),
-                                            dataReader.GetString(3),
-                                            dataReader.GetString(4),
-                                            dataReader.GetString(5));
+                                         dataReader.GetString(1),
+                                         dataReader.GetString(2),
+                                         dataReader.GetString(3),
+                                         dataReader.GetString(4),
+                                         dataReader.GetString(5));
 
+                    // add the book to the results if available
+                    if (book.Is_Available == true)
+                    {
+                        results.Add(book);
+                    }                    
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return results;
+            }
+            else
+            {
+                return results;
+            }
+        }
+
+        public List<Book> SearchGenre(string searchword)
+        {
+            List<Book> results = new List<Book>();
+
+            string query = $"SELECT * FROM books";
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+               
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    Book book = new Book(dataReader.GetString(0),
+                                         dataReader.GetString(1),
+                                         dataReader.GetString(2),
+                                         dataReader.GetString(3),
+                                         dataReader.GetString(4),
+                                         dataReader.GetString(5));
+
+                    if (book.Genre == searchword)
                     // add the book to the results
                     results.Add(book);
                 }
@@ -385,10 +430,7 @@ namespace FinalProject.Data
             else
             {
                 return results;
-
-            }
-
-        }
-
+            }       
+        }                       
     }
 }
