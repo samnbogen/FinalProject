@@ -95,5 +95,16 @@ namespace FinalProject.Entities
                 throw new BookAvailabilityException();
             }
         }
+
+        public string OnReserveDisplay()
+        {
+            string status = "In Use";
+            if (this.Is_Available)
+            {
+                status = "Available";
+            }
+            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_FirstName} ";
+        }
+
     }
 }

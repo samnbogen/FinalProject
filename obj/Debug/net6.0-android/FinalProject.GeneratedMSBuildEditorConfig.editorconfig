@@ -8,51 +8,51 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FinalProject
-build_property.ProjectDir = C:\finalproject\
+build_property.ProjectDir = C:\Users\sohee\source\final project - oop\
 
-[C:/finalproject/App.xaml]
+[C:/Users/sohee/source/final project - oop/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/finalproject/AppShell.xaml]
+[C:/Users/sohee/source/final project - oop/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/finalproject/Catalogue.xaml]
+[C:/Users/sohee/source/final project - oop/Catalogue.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.Catalogue.xaml
 build_metadata.AdditionalFiles.TargetPath = Catalogue.xaml
 build_metadata.AdditionalFiles.RelativePath = Catalogue.xaml
 
-[C:/finalproject/OnHoldPage.xaml]
+[C:/Users/sohee/source/final project - oop/OnHoldPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.OnHoldPage.xaml
 build_metadata.AdditionalFiles.TargetPath = OnHoldPage.xaml
 build_metadata.AdditionalFiles.RelativePath = OnHoldPage.xaml
 
-[C:/finalproject/ReservePage.xaml]
+[C:/Users/sohee/source/final project - oop/ReservePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.ReservePage.xaml
 build_metadata.AdditionalFiles.TargetPath = ReservePage.xaml
 build_metadata.AdditionalFiles.RelativePath = ReservePage.xaml
 
-[C:/finalproject/Resources/Styles/Colors.xaml]
+[C:/Users/sohee/source/final project - oop/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/finalproject/Resources/Styles/Styles.xaml]
+[C:/Users/sohee/source/final project - oop/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/finalproject/SearchPage.xaml]
+[C:/Users/sohee/source/final project - oop/SearchPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.SearchPage.xaml
 build_metadata.AdditionalFiles.TargetPath = SearchPage.xaml

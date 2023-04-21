@@ -1,1 +1,1 @@
-C:\finalproject\FinalProject.csproj;x64
+C:\Users\sohee\source\final project - oop\FinalProject.csproj;x64

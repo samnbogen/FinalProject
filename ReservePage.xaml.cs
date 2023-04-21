@@ -24,7 +24,7 @@ public partial class ReservePage : ContentPage
 
         // List<string> strings = new List<string>();
         //List<Book> booksInCart = new List<Book>();
-        booksInCart.ItemsSource = SearchPage.SelectedBooks.Select(book => book.Display()).ToList();
+        booksInCart.ItemsSource = SearchPage.SelectedBooks.Select(book => book.OnReserveDisplay()).ToList();
 
         //foreach (Book book in SearchPage.SelectedBooks)
         //{
