@@ -9,7 +9,8 @@ public partial class SearchPage : ContentPage
     int count = 0;
 
     public List<Book> Books = new List<Book>();
-    //public List<string> strings = new List<string>();
+    public List<Book> searchResults = new List<Book>();
+    public string noResult = "No Book found";
 
     public SearchPage()
     {
@@ -44,11 +45,15 @@ public partial class SearchPage : ContentPage
 
         if (count == 1 || listBooks.SelectedItem != null)
         {
-            SelectedBooks.Add((Book)listBooks.SelectedItem);
+            //SelectedBooks.Add((Book)listBooks.SelectedItem);
 
-            await DisplayAlert("Alert", "Check your book cart.", "Confirm");
+            bool hold = await DisplayAlert("On Hold", "Do you want to hold", "On hold", "Cancel");
+            if (hold)
+            {
+                SelectedBooks.Add((Book)listBooks.SelectedItem);
+            }
 
-            SearchPage.SelectedBooks = SelectedBooks;
+            //SearchPage.SelectedBooks = SelectedBooks;
 
             listBooks.SelectedItem = null;
         }
@@ -68,14 +73,14 @@ public partial class SearchPage : ContentPage
     private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
     {
         LibraryDatabase db = new LibraryDatabase();
-        List<Book> results = db.SearchBook(e.NewTextValue);
-        if (results.Count > 0)
+        searchResults = db.SearchBook(e.NewTextValue);
+        if (searchResults.Count > 0)
         {
-            listBooks.ItemsSource = results;
+            listBooks.ItemsSource = searchResults;
         }
         else
         {
-            await DisplayAlert("Alert", "No Book found", "Ok");
+            listBooks.ItemsSource=null;  //display nothing if not found;
         }
 
     }
@@ -88,7 +93,16 @@ public partial class SearchPage : ContentPage
     /// <param name="e"></param>
     private void SearchBtn_Clicked(object sender, EventArgs e)
     {
+       
+        if (searchResults.Count > 0)
+        {
+            listBooks.ItemsSource = searchResults;
+        }
+        else
+        {
+            DisplayAlert("Alert", noResult, "Ok");
 
+        }
     }
 }
 
