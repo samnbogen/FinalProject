@@ -9,14 +9,14 @@
         ColumnDefinitions="*">
         
             
-            <!--SearchBar-->
-            <SearchBar
+        <!--SearchBar-->
+        <SearchBar
         Grid.Row="0"
         Grid.Column="0"
         Placeholder="Search a Book"
         TextChanged="SearchBar_TextChanged"
-        SearchButtonPressed="SearchBtn_Clicked">
-            </SearchBar>
+        SearchButtonPressed="SearchBtn_Clicked"
+        TextColor ="White" ></SearchBar>
 
 
             <!--List of books called listBooks-->
@@ -24,21 +24,11 @@
         Grid.Row="1"
         x:Name="listBooks"
         SelectionMode="Single"
-        SelectionChanged="OnToCartClicked">
+        SelectionChanged="OnToCartClicked"
+        BackgroundColor="DarkSlateBlue">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">
-
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup Name="NormalState">
-                                    <VisualState Name="Hover">
-                                        <VisualState.Setters>
-                                            <Setter Property="BackgroundColor" Value="White" />
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />

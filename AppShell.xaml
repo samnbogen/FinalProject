@@ -5,25 +5,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:FinalProject"
     Shell.FlyoutBehavior="Disabled">
+
     <TabBar>
-        <ShellContent
-        Title="Catalogue Page"
-        ContentTemplate="{DataTemplate local:CataloguePage}"
-        Route="CataloguePage" />
-        <ShellContent
-        Title="Search"
-        ContentTemplate="{DataTemplate local:SearchPage}"
-        Route="SearchPage" />                
-        <ShellContent
-        Title="Reserve"
-        ContentTemplate="{DataTemplate local:ReservePage}"
-        Route="ReservePage" />
-        <ShellContent
-        Title="On Hold"
-        ContentTemplate="{DataTemplate local:OnHoldPage}"
-        Route="OnHoldPage" />
+        <Tab Title="Catalogue">
+            <ShellContent
+            Title="Catalogue Page"
+            ContentTemplate="{DataTemplate local:CataloguePage}"
+            Route="CataloguePage" />
+        </Tab>
+
+        <Tab Title="Search">
+            <ShellContent
+            Title="Search"
+            ContentTemplate="{DataTemplate local:SearchPage}"
+            Route="SearchPage" />
+        </Tab>
+        <Tab Title="Reserve">
+            <ShellContent
+            Title="Reserve"
+            ContentTemplate="{DataTemplate local:ReservePage}"
+            Route="ReservePage" />
+        </Tab>
+        <Tab Title="On Hold">
+            <ShellContent
+            Title="On Hold"
+            ContentTemplate="{DataTemplate local:OnHoldPage}"
+            Route="OnHoldPage" />
+        </Tab>
         
     </TabBar>
     
 
 </Shell>
+

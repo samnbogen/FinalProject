@@ -6,29 +6,33 @@
 
     <Grid Margin="20,35,20,20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>            
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>        
-        
-        
-        <BoxView Grid.Row="2"
-                 Color="DarkSlateBlue" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
 
-        <Image Source="bookstack.jpeg" Grid.Row="0" Aspect="AspectFit"></Image>     
+
+        <Image Source="bookstack.jpeg" Grid.Row="0" Aspect="AspectFit"></Image>
+        
+        
+
 
         <Label Text="Welcome to the Library!" 
-        TextColor="CornflowerBlue"
+        TextColor="DarkSlateBlue"
         TextDecorations="Underline"
         FontAttributes="Bold"
         Grid.Row="0"
+        Grid.ColumnSpan="2"
         HorizontalOptions="Center"
         VerticalOptions="Center"
-        FontSize="26"></Label>
+        FontSize="32"></Label>
+
+
 
         <Picker x:Name="genre"
         Grid.Row="1"
