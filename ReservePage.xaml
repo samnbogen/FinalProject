@@ -39,7 +39,72 @@
                         <Label Grid.Row="0" Grid.Column="3" Text="First Name" Padding="30"/>
                         <Label Grid.Row="0" Grid.Column="4" Text="Last Name" Padding="30"/>-->
                             <Grid>
-                                <ListView x:Name = "booksInCart" Grid.Column="0"></ListView>
+                                <!--<ListView x:Name = "booksInCart" Grid.Column="0"></ListView>-->
+                                <CollectionView
+                                    Grid.Row="1"
+                                    x:Name="booksInCart"
+                                    SelectionMode="Single"
+                                    SelectionChanged="OnCancelClicked">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Padding="10">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <!---rectangle-->
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <!--Title-->
+                                                    <ColumnDefinition Width="20" />
+                                                    <!--space-->
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <!--by-->
+                                                    <ColumnDefinition Width="10" />
+                                                    <!--space-->
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <!--Firstname-->
+                                                    <ColumnDefinition Width="5" />
+                                                    <!--space-->
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <!--space-->
+                                                </Grid.ColumnDefinitions>
+
+                                                <Rectangle Grid.RowSpan="2" 
+                                    WidthRequest="60" 
+                                    HeightRequest="60" 
+                                    Fill="WhiteSmoke" 
+                                    Stroke="LightGray" 
+                                    StrokeThickness="1" 
+                                    Margin="0,0,10,0">
+                                                </Rectangle>
+
+                                                <Label Grid.Row="0" Grid.Column="1"
+                                Text="{Binding Title}"
+                                FontAttributes="Bold"/>
+
+                                                <Label Grid.Row="0" Grid.Column="3"
+                                Text="by"
+                                FontAttributes="None"/>
+
+                                                <Label Grid.Row="0"
+                                Grid.Column="5"
+                                Text="{Binding Author_FirstName}"
+                                FontAttributes="Italic"
+                                HorizontalOptions="Start"/>
+
+                                                <Label Grid.Row="0"
+                                Grid.Column="7"
+                                Text="{Binding Author_LastName}"
+                                FontAttributes="Italic"
+                                HorizontalOptions="Start"/>
+
+                                            </Grid>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+
                             </Grid>
 
                         </HorizontalStackLayout>
@@ -54,16 +119,17 @@
             </ScrollView>
 
 
-            <Button
+            <!--<Button
             x:Name="ReserveBtn"
-            Text="Reserve"
+            Text="Cancel"
             SemanticProperties.Hint="Counts the number of times you click"
-            Clicked="OnReserveClicked"
-            HorizontalOptions="Center" />
+            Clicked="OnCancelClicked"
+            HorizontalOptions="Center" />-->
 
 
         </VerticalStackLayout>
     </ScrollView>
+
 
 </ContentPage>
     

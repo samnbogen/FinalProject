@@ -7,6 +7,8 @@
         Padding="10"
         RowDefinitions="50,*,50"
         ColumnDefinitions="*">
+        
+            
             <!--SearchBar-->
             <SearchBar
         Grid.Row="0"
@@ -18,7 +20,7 @@
 
 
             <!--List of books called listBooks-->
-            <CollectionView
+        <CollectionView
         Grid.Row="1"
         x:Name="listBooks"
         SelectionMode="Single"
@@ -26,27 +28,38 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="NormalState">
+                                    <VisualState Name="Hover">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="White" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
                                 <!---rectangle-->
                                 <ColumnDefinition Width="Auto" />
                                 <!--Title-->
+                                <ColumnDefinition Width="Auto" />
+                                <!--space-->
                                 <ColumnDefinition Width="20" />
-                                <!--space-->
-                                <ColumnDefinition Width="Auto"/>
                                 <!--by-->
+                                <ColumnDefinition Width="Auto"/>
+                                <!--space-->
                                 <ColumnDefinition Width="10" />
-                                <!--space-->
-                                <ColumnDefinition Width="Auto" />
                                 <!--Firstname-->
-                                <ColumnDefinition Width="5" />
-                                <!--space-->
                                 <ColumnDefinition Width="Auto" />
                                 <!--space-->
+                                <ColumnDefinition Width="5" />
+                                <!--Lastname-->
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
                             <Rectangle Grid.RowSpan="2" 

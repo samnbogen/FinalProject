@@ -6,12 +6,22 @@ namespace FinalProject;
 
 public partial class SearchPage : ContentPage 
 {
+    //counter for books selected in this page
     int count = 0;
-
+    //Books for the books to be displayed in this page
     public List<Book> Books = new List<Book>();
+    // search result books in the database
     public List<Book> searchResults = new List<Book>();
+    // message for when there is no result found
     public string noResult = "No Book found";
 
+    // a list for storing the selected books that are to reserve/put on hold
+    public static List<Book> SelectedBooks = new List<Book>();
+    public Book selectedBook;
+
+    /// <summary>
+    /// Search page constructor
+    /// </summary>
     public SearchPage()
     {
         //initialize the SearchPage
@@ -22,55 +32,58 @@ public partial class SearchPage : ContentPage
 
         //get all the books in the database and store in a list called books
         Books = db.Select();
-
-        // turn the books into a string; may need it later
-        //foreach(Book book in Books)
-        //{
-        //	strings.Add(book.Display());
-        //}
-
+        // sidplay those books in the collection view
         listBooks.ItemsSource = Books;
     }
 
-    // a list for storing the selected books
-    public static List<Book> SelectedBooks = new List<Book>();
-    public Book selectedBook;
+    
 
 
-
+    /// <summary>
+    /// adds the book to the list of books to be put on hold
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private async void OnToCartClicked(object sender, EventArgs e)
     {
+        
         count++;
-        //selectedBook = e.SelectedItem;
+        // get the selected item in the collectionview of the search page
+        selectedBook = (Book)listBooks.SelectedItem;
 
+        // check if there is as selected item, and they clicked on hold, then put the item in the list of books to be on hold
         if (count == 1 || listBooks.SelectedItem != null)
         {
-            //SelectedBooks.Add((Book)listBooks.SelectedItem);
-
-            bool hold = await DisplayAlert("On Hold", "Do you want to hold", "On hold", "Cancel");
-            if (hold)
+            // if selected book is currently available display the pop up where you can put it on hold; else, display it is not available
+            if (selectedBook.Is_Available)
             {
-                SelectedBooks.Add((Book)listBooks.SelectedItem);
+                bool hold = await DisplayAlert("On Hold", "Do you want to hold", "On hold", "Cancel");
+
+
+                if (hold)
+                {
+                    // add the book to the list of books callsed SelectedBooks which are the list of books to be displayed in the onhold/reserve page
+                    SelectedBooks.Add(selectedBook);
+                    selectedBook.Is_Available = false;  // make book no longer available to be put on hold;
+                }
+                listBooks.SelectedItem = null;  // after the selected book is added, turn it back to default
             }
 
-            //SearchPage.SelectedBooks = SelectedBooks;
+            else
+            {
+                await DisplayAlert("Not Availbale", "Sorry this book is currently unavailable", "Cancel");
+            }
 
-            listBooks.SelectedItem = null;
         }
-        //else if (listBooks.SelectedItem == )
-        //{
-
-        //}
-        //SemanticScreenReader.Announce(ToCartBtn.Text);
-        //book.placeHold();
     }
+
 
     /// <summary>
     /// Handles what happens when user types in a book, word, etc.
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
-    private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+    private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
     {
         LibraryDatabase db = new LibraryDatabase();
         searchResults = db.SearchBook(e.NewTextValue);

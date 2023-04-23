@@ -20,11 +20,23 @@ namespace FinalProject.Entities
         public string Genre { get; set; }
         public bool Is_Available { get; set; }
 
+        /// <summary>
+        /// Book constructor with no inputs
+        /// </summary>
         public Book()
         {
 
         }
 
+        /// <summary>
+        /// Book class constructor, takes in the following parameters
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="isbn"></param>
+        /// <param name="f_name"></param>
+        /// <param name="l_name"></param>
+        /// <param name="publisher"></param>
+        /// <param name="genre"></param>
         public Book(string title, string isbn, string f_name, string l_name, string publisher, string genre)
         {
             this.Title = title;
@@ -36,6 +48,16 @@ namespace FinalProject.Entities
             this.Is_Available = true;
         }
 
+        /// <summary>
+        /// Book class constructor, has additional parameter than the previous one.
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="isbn"></param>
+        /// <param name="f_name"></param>
+        /// <param name="l_name"></param>
+        /// <param name="publisher"></param>
+        /// <param name="genre"></param>
+        /// <param name="is_available"></param>
         public Book(string title, string isbn, string f_name, string l_name, string publisher, string genre, bool is_available)
         {
             this.Title = title;
@@ -47,6 +69,10 @@ namespace FinalProject.Entities
             this.Is_Available = is_available;
         }
 
+        /// <summary>
+        /// Reserves the book by computing the due date it's to be returned
+        /// </summary>
+        /// <returns> a string of the book's due date</returns>
         public string ReserveBook()
         {
             DateTime currentDate = DateTime.Now;
@@ -55,6 +81,9 @@ namespace FinalProject.Entities
             return dueDate.ToString("D");
         }
 
+        /// <summary>
+        /// turns back the book to be available
+        /// </summary>
         public void Returned()
         {
             //Not sure how to make this function
@@ -95,5 +124,18 @@ namespace FinalProject.Entities
                 throw new BookAvailabilityException();
             }
         }
+
+
+        public string OnReserveDisplay()
+        {
+            string status = "In Use";
+            if (this.Is_Available)
+            {
+                status = "Available";
+            }
+            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_LastName} ";
+        }
+
+
     }
 }
