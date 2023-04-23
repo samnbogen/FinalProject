@@ -125,11 +125,13 @@ namespace FinalProject.Data
             }
         }
 
-        //Delete statement - not working yet for our database:finale
-        public void Delete()
+        /// <summary>
+        /// deletes the book from the database; takes in the title of the book to be deleted
+        /// </summary>
+        /// <param name="title"></param>
+        public void Delete(string title)
         {
-            //string query = "DELETE FROM tableinfo WHERE name='John Smith'";
-            string query = "DELETE FROM tableinfo WHERE name='Joe'";
+            string query = $"DELETE FROM books WHERE title={title}";
 
             if (this.OpenConnection() == true)
             {
@@ -139,7 +141,10 @@ namespace FinalProject.Data
             }
         }
 
-        //Select statement
+        /// <summary>
+        /// connects to the database to get all the books currently there
+        /// </summary>
+        /// <returns></returns>
         public List<Book> Select()
         {
             string query = "SELECT * FROM books";
