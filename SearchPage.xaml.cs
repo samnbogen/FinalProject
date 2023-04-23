@@ -21,6 +21,8 @@ public partial class SearchPage : ContentPage
 
         //get all the books in the database and store in a list called books
         Books = db.Select();
+        // Don't include any book.Is_available = false
+
 
         // turn the books into a string; may need it later
         //foreach(Book book in Books)
@@ -33,31 +35,41 @@ public partial class SearchPage : ContentPage
 
     // a list for storing the selected books
     public static List<Book> SelectedBooks = new List<Book>();
-    public Book selectedBook;
-
+    //public Book selectedBook;
+    //Book book = new Book();
 
 
     private async void OnToCartClicked(object sender, EventArgs e)
     {
         count++;
         //selectedBook = e.SelectedItem;
+        Book selectedBook = (Book)listBooks.SelectedItem;
 
         if (count == 1 || listBooks.SelectedItem != null)
         {
-            SelectedBooks.Add((Book)listBooks.SelectedItem);
+            if(selectedBook.Is_Available.Equals(true))
+            {
+                bool hold = await DisplayAlert("On hold", "Do you want to hold", "On hold","Cancel");
+                if(hold)
+                {
+                    SelectedBooks.Add((Book)listBooks.SelectedItem);
+                    selectedBook.Is_Available = false;
 
-            await DisplayAlert("Alert", "Check your book cart.", "Confirm");
+                }
+                listBooks.SelectedItem = null;
+            }
 
-            SearchPage.SelectedBooks = SelectedBooks;
+            else
+            {
+                await DisplayAlert("Alert", "Currently not available", "Cancel");
+            }
 
-            listBooks.SelectedItem = null;
         }
         //else if (listBooks.SelectedItem == )
         //{
 
         //}
         //SemanticScreenReader.Announce(ToCartBtn.Text);
-        //book.placeHold();
     }
 
     /// <summary>

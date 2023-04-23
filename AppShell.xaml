@@ -15,7 +15,7 @@
         ContentTemplate="{DataTemplate local:SearchPage}"
         Route="SearchPage" />                
         <ShellContent
-        Title="Reserve"
+        Title="On Hold"
         ContentTemplate="{DataTemplate local:ReservePage}"
         Route="ReservePage" />
         <ShellContent

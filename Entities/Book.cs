@@ -68,7 +68,7 @@ namespace FinalProject.Entities
             {
                 status = "Available";
             }
-            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_FirstName} {status}";
+            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_LastName} {status}";
         }
 
         public void placeHold()
@@ -103,7 +103,7 @@ namespace FinalProject.Entities
             {
                 status = "Available";
             }
-            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_FirstName} ";
+            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_LastName} ";
         }
 
     }

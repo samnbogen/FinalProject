@@ -34,11 +34,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.OnHoldPage.xa
 build_metadata.AdditionalFiles.TargetPath = OnHoldPage.xaml
 build_metadata.AdditionalFiles.RelativePath = OnHoldPage.xaml
 
-[C:/Users/sohee/source/final project - oop/ReservePage.xaml]
+[C:/Users/sohee/source/final project - oop/Reserve.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.ReservePage.xaml
-build_metadata.AdditionalFiles.TargetPath = ReservePage.xaml
-build_metadata.AdditionalFiles.RelativePath = ReservePage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinalProject.Reserve.xaml
+build_metadata.AdditionalFiles.TargetPath = Reserve.xaml
+build_metadata.AdditionalFiles.RelativePath = Reserve.xaml
 
 [C:/Users/sohee/source/final project - oop/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
