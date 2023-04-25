@@ -9,13 +9,16 @@
             <GradientStop Color="Black"
                           Offset="0.1" />
             <GradientStop Color="Purple"
-                          Offset="3.5" />
+                          Offset="3.0" />
         </LinearGradientBrush>
 
     </ContentPage.Background>    
 
 
     <Grid HorizontalOptions="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="150" />
             <RowDefinition Height="*"/>
@@ -29,7 +32,7 @@
         FontSize="32"
         VerticalOptions="Center" 
         HorizontalOptions="Center"/>
-        
+
         <CollectionView
             Grid.Row="1"
             x:Name="booksInCart"
@@ -37,59 +40,51 @@
             SelectionChanged="OnCancelClicked">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
+                    <Grid Padding="10" ColumnSpacing="10" RowSpacing="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
                             <!---rectangle-->
                             <ColumnDefinition Width="Auto" />
                             <!--Title-->
-                            <ColumnDefinition Width="20" />
-                            <!--space-->
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto" />
                             <!--by-->
-                            <ColumnDefinition Width="10" />
-                            <!--space-->
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto"/>
                             <!--Firstname-->
-                            <ColumnDefinition Width="5" />
-                            <!--space-->
                             <ColumnDefinition Width="Auto" />
-                            <!--space-->
+                            <!--Lastname-->
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-    
-                        <Rectangle Grid.RowSpan="2" 
-                            WidthRequest="60" 
-                            HeightRequest="60" 
-                            Fill="WhiteSmoke" 
-                            Stroke="LightGray" 
-                            StrokeThickness="1" 
-                            Margin="0,0,10,0">
+
+                        <Rectangle Grid.Column="0" 
+                                WidthRequest="60" 
+                                HeightRequest="60" 
+                                Fill="WhiteSmoke" 
+                                Stroke="LightGray" 
+                                StrokeThickness="1" 
+                                Margin="0,0,10,0">
                         </Rectangle>
-    
-                        <Label Grid.Row="0" Grid.Column="1"
+
+                        <Label Grid.Column="1" 
+                            VerticalOptions="Center" 
                             Text="{Binding Title}"
                             FontAttributes="Bold"/>
-    
-                        <Label Grid.Row="0" Grid.Column="3"
+
+                        <Label Grid.Column="2"
+                            VerticalOptions="Center" 
                             Text="by"
                             FontAttributes="None"/>
-    
-                        <Label Grid.Row="0"
-                            Grid.Column="5"
+
+                        <Label Grid.Column="3"
+                            VerticalOptions="Center" 
                             Text="{Binding Author_FirstName}"
                             FontAttributes="Italic"
                             HorizontalOptions="Start"/>
-    
-                        <Label Grid.Row="0"
-                            Grid.Column="7"
+
+                        <Label Grid.Column="4"
+                            VerticalOptions="Center" 
                             Text="{Binding Author_LastName}"
                             FontAttributes="Italic"
                             HorizontalOptions="Start"/>
-    
+
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
