@@ -1,5 +1,4 @@
 ﻿using FinalProject.Entities;
-using Microsoft.UI.Xaml.Input;
 using MySqlConnector;
 using System;
 using System.Collections;
@@ -390,6 +389,7 @@ namespace FinalProject.Data
             }
         }
 
+        //Searches for a book matching the genre selected
         public List<Book> SearchGenre(string searchword)
         {
             List<Book> results = new List<Book>();
@@ -413,6 +413,7 @@ namespace FinalProject.Data
                                          dataReader.GetString(4),
                                          dataReader.GetString(5));
 
+                    //only getting the books that match the genre of the searchword
                     if (book.Genre == searchword)
                     // add the book to the results
                     results.Add(book);

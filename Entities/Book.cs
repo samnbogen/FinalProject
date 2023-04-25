@@ -48,29 +48,7 @@ namespace FinalProject.Entities
             this.Is_Available = is_available;
         }
 
-        public string ReserveBook()
-        {
-            DateTime currentDate = DateTime.Now;
-            DateTime dueDate = currentDate.AddDays(2);
-
-            return dueDate.ToString("D");
-        }
-
-        public void Returned()
-        {
-            //Not sure how to make this function
-        }
-
-        public string Display()
-        {
-            string status = "In Use";
-            if (this.Is_Available)
-            {
-                status = "Available";
-            }
-            return $"{Isbn} {Title} {Genre} {Author_FirstName} {Author_LastName} {status}";
-        }
-
+        //changes the status of the book to unavailable
         public void placeHold()
         {
             if (this.Is_Available == true) 
@@ -82,7 +60,8 @@ namespace FinalProject.Entities
                 throw new BookAvailabilityException();
             }            
         }
-
+        
+        //changes the status of the book back to available
         public void cancelHold()
         {
             if (this.Is_Available == false)

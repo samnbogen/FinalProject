@@ -4,46 +4,33 @@
              x:Class="FinalProject.CataloguePage"
              Title="CataloguePage">
 
+    <ContentPage.Background>
+        <!--Setting a gradient to the background-->
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="Black"
+                          Offset="0.1" />
+            <GradientStop Color="Purple"
+                          Offset="3.5" />
+        </LinearGradientBrush>
+
+    </ContentPage.Background>
+
     <Grid Margin="20,35,20,20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="35"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="3*"/>            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>            
-            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
 
-        
+        <!--The header image-->
+        <Image Source="bookheader2.jpg" Grid.Row="0" Grid.ColumnSpan="2" Aspect="AspectFit"></Image>
 
-        <Image Source="bookheader.jpg" Grid.Row="0" Grid.ColumnSpan="2" Aspect="AspectFit"></Image>
-        
-        <Border StrokeThickness="4"
-        StrokeShape="RoundRectangle 40,0,0,40"
-        BackgroundColor="BlanchedAlmond"     
-        Padding="16,8"
-        HorizontalOptions="Center">
-            <Border.Stroke>
-                <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Color="Orange"
-                          Offset="0.1" />
-                    <GradientStop Color="DarkSlateBlue"
-                          Offset="1.0" />
-                </LinearGradientBrush>
-            </Border.Stroke>
-            <Label Text="Welcome to the Library!" 
-        TextColor="DarkSlateBlue"
-        TextDecorations="Underline"
-        FontAttributes="Bold"
-        Grid.Row="0"
-        Grid.ColumnSpan="2"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        FontSize="32"></Label>
-        </Border>
-
+        <!--Picker gives a dop down list of available genres-->
         <Picker x:Name="genre"
         Grid.Row="1"
         Grid.ColumnSpan="2"
@@ -53,7 +40,7 @@
         VerticalOptions="Center"
         FontSize="16"
         FontAttributes="Bold"
-        TitleColor="DarkSlateBlue">
+        TitleColor="SlateBlue">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Fantasy</x:String>
@@ -66,17 +53,11 @@
             </Picker.ItemsSource>
         </Picker>
 
+        <!--The bar the separetes the page-->
         <BoxView Grid.Row="2" Grid.ColumnSpan="2"
-                 Color="DarkSlateBlue" />
-
-        <Label x:Name = "genreLabel" 
-        Text="{Binding Source={x:Reference genre}, Path=SelectedItem}" 
-        Grid.Row="2"
-        Grid.ColumnSpan="2"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        FontSize="20"/>        
-
+                 Color="DarkSlateBlue"/>
+        
+        <!--The genre image-->
         <Image x:Name="myImage" 
                WidthRequest="75" 
                HeightRequest="75"
@@ -85,7 +66,7 @@
                Grid.Row="3" 
                Grid.Column="0"/>
 
-        <!--List of books called listBooks-->
+        <!--List of books-->
         <CollectionView
         Grid.Row="3"
         Grid.Column="1"

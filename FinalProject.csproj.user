@@ -9,8 +9,5 @@
     <MauiXaml Update="ReservePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="OnHoldPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
   </ItemGroup>
 </Project>

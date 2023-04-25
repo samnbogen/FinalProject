@@ -16,14 +16,8 @@
         Route="SearchPage" />                
         <ShellContent
         Title="Reserve"
-        ContentTemplate="{DataTemplate local:ReservePage}"
-        Route="ReservePage" />
-        <ShellContent
-        Title="On Hold"
-        ContentTemplate="{DataTemplate local:OnHoldPage}"
-        Route="OnHoldPage" />
-        
-    </TabBar>
-    
+        ContentTemplate="{DataTemplate local:ReservePage}"        
+        Route="ReservePage" />       
+    </TabBar>    
 
 </Shell>

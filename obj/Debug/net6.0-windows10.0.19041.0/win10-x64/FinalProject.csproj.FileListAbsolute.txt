@@ -1460,3 +1460,4 @@ C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\mys
 C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\romance.scale-100.png
 C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\satire.scale-100.png
 C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\scifi.scale-100.png
+C:\finalproject\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\bookheader2.scale-100.jpg

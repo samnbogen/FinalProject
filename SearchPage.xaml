@@ -2,27 +2,41 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProject.SearchPage">
+
+    <ContentPage.Background>
+        <!--Setting a gradient to the background-->
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="Black"
+                          Offset="0.1" />
+            <GradientStop Color="Purple"
+                          Offset="3.5" />
+        </LinearGradientBrush>
+
+    </ContentPage.Background>
+    
     <ScrollView>
         <Grid
         Padding="10"
         RowDefinitions="50,*,50"
         ColumnDefinitions="*">
+
+
             <!--SearchBar-->
             <SearchBar
-        Grid.Row="0"
-        Grid.Column="0"
-        Placeholder="Search a Book"
-        TextChanged="SearchBar_TextChanged"
-        SearchButtonPressed="SearchBtn_Clicked">
-            </SearchBar>
+            Grid.Row="0"
+            Grid.Column="0"
+            Placeholder="Search a Book"
+            TextChanged="SearchBar_TextChanged"
+            SearchButtonPressed="SearchBtn_Clicked"
+            TextColor ="White" ></SearchBar>
 
 
             <!--List of books called listBooks-->
             <CollectionView
-        Grid.Row="1"
-        x:Name="listBooks"
-        SelectionMode="Single"
-        SelectionChanged="OnToCartClicked">
+            Grid.Row="1"
+            x:Name="listBooks"
+            SelectionMode="Single"
+            SelectionChanged="OnToCartClicked">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">
@@ -31,22 +45,22 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
                                 <!---rectangle-->
                                 <ColumnDefinition Width="Auto" />
                                 <!--Title-->
+                                <ColumnDefinition Width="Auto" />
+                                <!--space-->
                                 <ColumnDefinition Width="20" />
-                                <!--space-->
-                                <ColumnDefinition Width="Auto"/>
                                 <!--by-->
+                                <ColumnDefinition Width="Auto"/>
+                                <!--space-->
                                 <ColumnDefinition Width="10" />
-                                <!--space-->
-                                <ColumnDefinition Width="Auto" />
                                 <!--Firstname-->
-                                <ColumnDefinition Width="5" />
-                                <!--space-->
                                 <ColumnDefinition Width="Auto" />
                                 <!--space-->
+                                <ColumnDefinition Width="5" />
+                                <!--Lastname-->
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
                             <Rectangle Grid.RowSpan="2" 
