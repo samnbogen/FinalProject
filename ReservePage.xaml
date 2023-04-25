@@ -17,13 +17,14 @@
 
     <Grid HorizontalOptions="Center">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="500"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="150" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
+        <!--Heading for the page-->
         <Label
         Grid.Row="0"
         Text="Book Cart"
@@ -33,6 +34,7 @@
         VerticalOptions="Center" 
         HorizontalOptions="Center"/>
 
+        <!--List of books on hold-->
         <CollectionView
             Grid.Row="1"
             x:Name="booksInCart"

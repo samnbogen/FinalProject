@@ -314,11 +314,11 @@ namespace FinalProject.Data
                 {
 
                     Book book = new Book(dataReader.GetString(0),
-                                            dataReader.GetString(1),
-                                            dataReader.GetString(2),
-                                            dataReader.GetString(3),
-                                            dataReader.GetString(4),
-                                            dataReader.GetString(5));
+                                         dataReader.GetString(1),
+                                         dataReader.GetString(2),
+                                         dataReader.GetString(3),
+                                         dataReader.GetString(4),
+                                         dataReader.GetString(5));
 
                     // now add this book with its book properties to books
                     randomBook.Add(book);

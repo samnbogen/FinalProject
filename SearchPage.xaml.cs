@@ -63,7 +63,6 @@ public partial class SearchPage : ContentPage
                     // add the book to the list of books callsed SelectedBooks which are the list of books to be displayed in the onhold/reserve page
                     SelectedBooks.Add(selectedBook);
                     selectedBook.placeHold();  // make book no longer available to be put on hold;
-
                 }
                 listBooks.SelectedItem = null;  // after the selected book is added, turn it back to default
             }

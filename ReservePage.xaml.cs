@@ -16,10 +16,20 @@ public partial class ReservePage : ContentPage
         InitializeComponent();
 
         //getting books selected on the Search Page        
-        books = SearchPage.SelectedBooks.ToList();
+        //books = SearchPage.SelectedBooks.ToList();
         
         //putting those books in a list
-        booksInCart.ItemsSource = books;      
+        //booksInCart.ItemsSource = books;
+    }
+
+    protected override async void OnAppearing()
+    {
+        //base.OnAppearing();
+        //getting books selected on the Search Page        
+        books = SearchPage.SelectedBooks.ToList();
+
+        //putting those books in a list
+        booksInCart.ItemsSource = books;
     }
 
     private async void OnCancelClicked(object sender, EventArgs e)
@@ -36,6 +46,11 @@ public partial class ReservePage : ContentPage
             {
                 //removing the book from the list and changing it's status
                 books.Remove(selectedBook);
+
+                //remove book from the list on the search page
+                SearchPage.SelectedBooks.Remove(selectedBook);
+
+                //cancels the hold status
                 selectedBook.cancelHold();
                 booksInCart.ItemsSource = null;
                 booksInCart.ItemsSource = books;
