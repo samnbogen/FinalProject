@@ -3,6 +3,10 @@ using FinalProject.Entities;
 using System.Collections;
 using FinalProject.Data;
 
+// Created for CPRG 211 finale project
+// Page to show available books by genre
+// created by Samantha Bogen
+// April 25, 2023
 public partial class CataloguePage : ContentPage
 {
     public CataloguePage()

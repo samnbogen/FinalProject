@@ -4,6 +4,10 @@ using FinalProject.Data;
 
 namespace FinalProject;
 
+// Created for CPRG 211 finale project
+// Page search through the books and place them on hold.
+// created by Iza Lumpio and Lisa Pokam
+// April 25, 2023
 public partial class SearchPage : ContentPage
 {
     //counter for books selected in this page
@@ -32,7 +36,8 @@ public partial class SearchPage : ContentPage
 
         //get all the books in the database and store in a list called books
         Books = db.Select();
-        // sidplay those books in the collection view
+
+        // display those books in the collection view
         listBooks.ItemsSource = Books;
     }
 
@@ -72,7 +77,6 @@ public partial class SearchPage : ContentPage
                 await DisplayAlert("Not Availbale", "Sorry this book is currently unavailable", "Cancel");
             }
         }
-
     } 
 
     /// <summary>

@@ -9,7 +9,7 @@
             <GradientStop Color="Black"
                           Offset="0.1" />
             <GradientStop Color="Purple"
-                          Offset="3.0" />
+                          Offset="2.5" />
         </LinearGradientBrush>
 
     </ContentPage.Background>
@@ -20,7 +20,6 @@
         RowDefinitions="50,*,50"
         ColumnDefinitions="*">
 
-
             <!--SearchBar-->
             <SearchBar
             Grid.Row="0"
@@ -29,7 +28,6 @@
             TextChanged="SearchBar_TextChanged"
             SearchButtonPressed="SearchBtn_Clicked"
             TextColor ="White" ></SearchBar>
-
 
             <!--List of books called listBooks-->
             <CollectionView

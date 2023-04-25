@@ -9,6 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace FinalProject.Entities
+
+// Create Book class
+// Created for CPRG 211 finale project
+// created by Iza Lumpio, Lisa Pokam, Sohee Ryu, and Samantha Bogen
+// April 25, 2023
 {
     public class Book
     {

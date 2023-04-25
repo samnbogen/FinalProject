@@ -4,7 +4,13 @@ using FinalProject;
 using System.Windows.Input;
 using System.Collections.ObjectModel;
 
+
 namespace FinalProject;
+
+// Created for CPRG 211 finale project
+// Page to show books that are onhold and gives the user a way to cancel the hold
+// created by Sohee Ryu
+// April 25, 2023
 
 public partial class ReservePage : ContentPage
 {
@@ -14,17 +20,14 @@ public partial class ReservePage : ContentPage
     public ReservePage()
     {
         InitializeComponent();
-
-        //getting books selected on the Search Page        
-        //books = SearchPage.SelectedBooks.ToList();
-        
-        //putting those books in a list
-        //booksInCart.ItemsSource = books;
     }
 
+    //refreshes the list every time the page loads
     protected override async void OnAppearing()
     {
-        //base.OnAppearing();
+        //waits for us to navigate back
+        await Shell.Current.GoToAsync("..");
+
         //getting books selected on the Search Page        
         books = SearchPage.SelectedBooks.ToList();
 

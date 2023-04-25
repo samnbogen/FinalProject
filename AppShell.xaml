@@ -9,15 +9,15 @@
         <ShellContent
         Title="Catalogue Page"
         ContentTemplate="{DataTemplate local:CataloguePage}"
-        Route="CataloguePage" />
+        Route="CataloguePage"/>
         <ShellContent
         Title="Search"
         ContentTemplate="{DataTemplate local:SearchPage}"
-        Route="SearchPage" />                
+        Route="SearchPage"/>                
         <ShellContent
         Title="Reserve"
         ContentTemplate="{DataTemplate local:ReservePage}"        
-        Route="ReservePage" />       
+        Route="ReservePage"/>       
     </TabBar>    
 
 </Shell>

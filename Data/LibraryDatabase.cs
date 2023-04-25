@@ -9,9 +9,12 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
+// Create connection to Book database and create search functions for it
+// Created for CPRG 211 finale project
+// created by Iza Lumpio, Lisa Pokam, Sohee Ryu, and Samantha Bogen
+// April 25, 2023
 namespace FinalProject.Data
 {
-
     // for connecting to the database
     public class LibraryDatabase
     {
@@ -82,63 +85,7 @@ namespace FinalProject.Data
                 Console.WriteLine(ex.Message);
                 return false;
             }
-        }
-
-        //Insert statement
-        public void Insert()
-        {
-            string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
-
-            //open connection
-            if (this.OpenConnection() == true)
-            {
-                //create command and assign the query and connection from the constructor
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-
-                //Execute command
-                cmd.ExecuteNonQuery();
-
-                //close connection
-                this.CloseConnection();
-            }
-        }
-
-        //Update statement
-        public void Update()
-        {
-            string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
-
-            //Open connection
-            if (this.OpenConnection() == true)
-            {
-                //create mysql command
-                MySqlCommand cmd = new MySqlCommand();
-                //Assign the query using CommandText
-                cmd.CommandText = query;
-                //Assign the connection using Connection
-                cmd.Connection = connection;
-
-                //Execute query
-                cmd.ExecuteNonQuery();
-
-                //close connection
-                this.CloseConnection();
-            }
-        }
-
-        //Delete statement - not working yet for our database:finale
-        public void Delete()
-        {
-            //string query = "DELETE FROM tableinfo WHERE name='John Smith'";
-            string query = "DELETE FROM tableinfo WHERE name='Joe'";
-
-            if (this.OpenConnection() == true)
-            {
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.ExecuteNonQuery();
-                this.CloseConnection();
-            }
-        }
+        }        
 
         //Select statement
         public List<Book> Select()
@@ -168,11 +115,11 @@ namespace FinalProject.Data
                 {
 
                     Book book = new Book(dataReader.GetString(0),
-                                            dataReader.GetString(1),
-                                            dataReader.GetString(2),
-                                            dataReader.GetString(3),
-                                            dataReader.GetString(4),
-                                            dataReader.GetString(5));
+                                         dataReader.GetString(1),
+                                         dataReader.GetString(2),
+                                         dataReader.GetString(3),
+                                         dataReader.GetString(4),
+                                         dataReader.GetString(5));
 
                     // now add this book with its book properties to books
                     books.Add(book);
@@ -293,53 +240,7 @@ namespace FinalProject.Data
             {
                 Console.WriteLine(ex);
             }
-
         }
-
-        public List<Book> SelectABook()
-        {
-            string query = "SELECT * FROM books ORDER BY RAND() LIMIT 1";
-
-            List<Book> randomBook = new List<Book>();
-            //Open connection
-            if (this.OpenConnection() == true)
-            {
-                //Create Command
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                //Create a data reader and Execute the command
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                //Read the data and store them in the list
-                while (dataReader.Read())
-                {
-
-                    Book book = new Book(dataReader.GetString(0),
-                                         dataReader.GetString(1),
-                                         dataReader.GetString(2),
-                                         dataReader.GetString(3),
-                                         dataReader.GetString(4),
-                                         dataReader.GetString(5));
-
-                    // now add this book with its book properties to books
-                    randomBook.Add(book);
-                }
-
-                //close Data Reader
-                dataReader.Close();
-
-                //close Connection
-                this.CloseConnection();
-
-                //return list to be displayed
-                return randomBook;
-            }
-            else
-            {
-                return randomBook;
-            }
-
-        }
-
 
         ///<summary>
         /// searches the library database for a book and returns a list of related books
