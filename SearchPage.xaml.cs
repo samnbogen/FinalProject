@@ -1,7 +1,7 @@
 ﻿using FinalProject.Entities;
 using System.Collections;
 using FinalProject.Data;
-
+using FinalProject.Exceptions;
 namespace FinalProject;
 
 public partial class SearchPage : ContentPage 
@@ -12,12 +12,15 @@ public partial class SearchPage : ContentPage
     public List<Book> Books = new List<Book>();
     // search result books in the database
     public List<Book> searchResults = new List<Book>();
-    // message for when there is no result found
-    public string noResult = "No Book found";
+    
 
     // a list for storing the selected books that are to reserve/put on hold
     public static List<Book> SelectedBooks = new List<Book>();
     public Book selectedBook;
+
+    //exception
+    public BookAvailabilityException eBookNotAvailable = new BookAvailabilityException() { };
+    public BookNotFoundException eBookNotFound = new BookNotFoundException() { };
 
     /// <summary>
     /// Search page constructor
@@ -71,7 +74,7 @@ public partial class SearchPage : ContentPage
 
             else
             {
-                await DisplayAlert("Not Availbale", "Sorry this book is currently unavailable", "Cancel");
+                await DisplayAlert("Not Availbale",eBookNotAvailable.Message, "Cancel");
             }
 
         }
@@ -113,7 +116,7 @@ public partial class SearchPage : ContentPage
         }
         else
         {
-            DisplayAlert("Alert", noResult, "Ok");
+            DisplayAlert("Alert", eBookNotFound.Message, "Ok");
 
         }
     }
