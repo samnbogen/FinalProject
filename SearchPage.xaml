@@ -73,14 +73,12 @@
                             <Label Grid.Column="3"
                             VerticalOptions="Center" 
                             Text="{Binding Author_FirstName}"
-                            FontAttributes="Italic"
-                            HorizontalOptions="Start"/>
+                            FontAttributes="Italic"/>
 
                             <Label Grid.Column="4"
                             VerticalOptions="Center" 
                             Text="{Binding Author_LastName}"
-                            FontAttributes="Italic"
-                            HorizontalOptions="Start"/>
+                            FontAttributes="Italic"/>
 
                         </Grid>
                     </DataTemplate>

@@ -1,4 +1,5 @@
 ﻿using FinalProject.Entities;
+using FinalProject.Exceptions;
 using MySqlConnector;
 using System;
 using System.Collections;
@@ -26,7 +27,6 @@ namespace FinalProject.Data
         public LibraryDatabase()
         {
             Initialize();
-
         }
 
         //Initialize the values needed for the connection
@@ -286,7 +286,7 @@ namespace FinalProject.Data
             }
             else
             {
-                return results;
+                throw new ConnectionNotFoundException();
             }
         }
 
@@ -326,12 +326,18 @@ namespace FinalProject.Data
                 //close Connection
                 this.CloseConnection();
 
+                //check that the list has books on it
+                if (results.Count <= 0)
+                {
+                    throw new BookNotFoundException();
+                }
+
                 //return list to be displayed
                 return results;
             }
             else
             {
-                return results;
+                throw new ConnectionNotFoundException();
             }       
         }                       
     }

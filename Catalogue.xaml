@@ -58,7 +58,7 @@
                  Color="DarkSlateBlue"/>
         
         <!--The genre image-->
-        <Image x:Name="myImage" 
+        <Image x:Name="genreImage" 
                WidthRequest="75" 
                HeightRequest="75"
                HorizontalOptions="End"
@@ -70,7 +70,7 @@
         <CollectionView
         Grid.Row="3"
         Grid.Column="1"
-        x:Name="spot3"
+        x:Name="booklist"
         SelectionMode="None"
             VerticalOptions="Center"
             HorizontalOptions="Start">

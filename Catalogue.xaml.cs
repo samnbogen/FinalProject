@@ -34,28 +34,28 @@ public partial class CataloguePage : ContentPage
             List<Book> results = db.SearchGenre(name);
 
             //setting the book results to a list on the xaml page
-            spot3.ItemsSource = results;
+            booklist.ItemsSource = results;
 
             //changing the picture based on what the genre is
             foreach (Book book in results)
             {
                 if (book.Genre == "Fantasy")
-                myImage.Source = "fantasy.png";
+                genreImage.Source = "fantasy.png";
 
                 if (book.Genre == "Fiction")
-                myImage.Source = "fiction.png";
+                genreImage.Source = "fiction.png";
 
                 if (book.Genre == "Mystery")
-                myImage.Source = "mystery.png";
+                genreImage.Source = "mystery.png";
 
                 if (book.Genre == "Science Fiction")
-                myImage.Source = "scifi.png";
+                genreImage.Source = "scifi.png";
 
                 if (book.Genre == "Satire")
-                myImage.Source = "satire.png";
+                genreImage.Source = "satire.png";
 
                 if (book.Genre == "Romance")
-                myImage.Source = "romance.png";                
+                genreImage.Source = "romance.png";                
             }            
         }  
     }
