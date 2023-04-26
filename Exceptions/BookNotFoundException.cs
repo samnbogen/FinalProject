@@ -9,6 +9,6 @@ namespace FinalProject.Exceptions
     //This exception is throws when the book is not found 
     public class BookNotFoundException : Exception
     {
-        public BookNotFoundException() : base("Sorry, we cannot find the book you're looking for") { }
+        public BookNotFoundException() : base("Sorry, we cannot find the book you're looking for.") { }
     }
 }
