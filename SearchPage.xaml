@@ -57,7 +57,7 @@
                                 Fill="WhiteSmoke" 
                                 Stroke="LightGray" 
                                 StrokeThickness="1" 
-                                Margin="0,0,10,0">
+                                Margin="60,0,10,0">
                             </Rectangle>
 
                             <Label Grid.Column="1" 

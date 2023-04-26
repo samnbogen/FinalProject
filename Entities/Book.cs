@@ -17,7 +17,6 @@ namespace FinalProject.Entities
 {
     public class Book
     {
-
         public string Title { get; set; }
         public string Isbn { get; set; }
         public string Author_FirstName { get; set; }
